@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VANAGSTUDY — Экосистема качественного образования</title>
+    <title>VANAGSTUDY — Школа точных наук и олимпиадной подготовки</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -22,10 +22,12 @@
                         display: ['"Unbounded"', 'sans-serif'],
                     },
                     colors: {
-                        darkBg: '#090A0F',
-                        darkCard: '#131520',
-                        brandBlue: '#3B82F6',
-                        brandCyan: '#06B6D4',
+                        brandBg: '#F2F0EA', /* Premium warm soft ivory background */
+                        brandCard: '#FFFFFF',
+                        brandBlue: '#1D4ED8',
+                        brandDarkBlue: '#1E3A8A',
+                        brandText: '#0F172A',
+                        brandMuted: '#475569',
                     }
                 }
             }
@@ -33,168 +35,141 @@
     </script>
     <style>
         body {
-            background-color: #090A0F;
+            background-color: #F2F0EA; /* Soft distinguished grey-ivory color */
             font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #0F172A;
             overflow-x: hidden;
         }
-        /* Custom Glowing effects */
-        .glow-blue {
-            box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.15);
+        .premium-shadow {
+            box-shadow: 0 4px 30px rgba(15, 23, 42, 0.03);
         }
-        .glow-cyan {
-            box-shadow: 0 0 50px -10px rgba(6, 182, 212, 0.15);
+        .premium-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .text-glow {
-            text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        .premium-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #090A0F;
+            background: #F2F0EA;
         }
         ::-webkit-scrollbar-thumb {
-            background: #1F2937;
+            background: #E2E8F0;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #3B82F6;
+            background: #CBD5E1;
         }
     </style>
 </head>
-<body class="text-gray-100 selection:bg-brandBlue selection:text-white min-h-screen flex flex-col justify-between">
+<body class="selection:bg-blue-100 selection:text-brandBlue min-h-screen flex flex-col justify-between">
 
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-darkBg/80 border-b border-gray-800">
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/95 border-b border-slate-200/55 premium-shadow">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="bg-gradient-to-r from-brandBlue to-brandCyan text-darkBg p-2.5 rounded-xl font-display font-bold text-xl tracking-wider">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="bg-brandBlue text-white w-10 h-10 rounded-xl font-display font-bold text-base flex items-center justify-center tracking-wider group-hover:bg-brandDarkBlue transition shadow-md shadow-blue-600/15">
                     VS
                 </div>
-                <span class="font-display font-bold text-xl tracking-widest bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                    VANAG<span class="text-brandBlue text-glow">STUDY</span>
-                </span>
-            </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-base tracking-widest text-brandText">
+                        VANAG<span class="text-brandBlue font-extrabold">STUDY</span>
+                    </span>
+                    <span class="text-[9px] font-bold text-brandMuted tracking-wider uppercase">Школа точных наук</span>
+                </div>
+            </a>
             
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400">
-                <a href="#philosophy" class="hover:text-white transition">Философия</a>
-                <a href="#subjects" class="hover:text-white transition">Направления</a>
-                <a href="#teachers" class="hover:text-white transition">Преподаватели</a>
-                <a href="#calculator" class="hover:text-white transition">Калькулятор</a>
-                <a href="#quiz" class="hover:text-white transition">Подбор трека</a>
+            <nav class="hidden lg:flex items-center space-x-8 text-xs font-bold uppercase tracking-wider text-brandMuted">
+                <a href="#philosophy" class="hover:text-brandBlue transition">Принцип</a>
+                <a href="#subjects" class="hover:text-brandBlue transition">Направления</a>
+                <a href="#team" class="hover:text-brandBlue transition">Преподаватели</a>
+                <a href="#prices" class="hover:text-brandBlue transition">Стоимость</a>
+                <a href="#quiz" class="hover:text-brandBlue transition text-brandBlue bg-blue-50 px-3 py-1.5 rounded-lg">Подобрать трек</a>
             </nav>
 
-            <div class="flex items-center space-x-4">
-                <a href="https://t.me/vanagstudy" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center space-x-2 text-brandCyan hover:text-white transition bg-cyan-950/40 border border-brandCyan/30 px-4 py-2 rounded-xl text-sm">
+            <div class="flex items-center space-x-3">
+                <a href="https://t.me/vanagstudy" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center space-x-2 text-brandBlue hover:bg-blue-50/50 transition border border-blue-200 px-4 py-2.5 rounded-xl text-xs font-semibold">
                     <i class="fa-brands fa-telegram text-base"></i>
                     <span>Канал школы</span>
                 </a>
-                <button onclick="toggleModal(true)" class="bg-gradient-to-r from-brandBlue to-blue-600 hover:from-blue-600 hover:to-brandBlue text-white font-medium px-5 py-2.5 rounded-xl text-sm transition shadow-lg shadow-brandBlue/20">
+                <button onclick="toggleModal(true)" class="bg-brandBlue hover:bg-brandDarkBlue text-white font-semibold px-5 py-2.5 rounded-xl text-xs transition shadow-lg shadow-blue-600/10">
                     Связаться
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative pt-12 pb-24 overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,#1e293b,transparent_60%)] opacity-30"></div>
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
+    <section class="relative pt-12 pb-20 overflow-hidden bg-gradient-to-b from-white to-transparent">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             
-            <div class="md:col-span-7 space-y-8">
-                <div class="inline-flex items-center space-x-2 bg-blue-950/50 border border-brandBlue/40 text-blue-400 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
-                    <span class="w-2 h-2 rounded-full bg-brandBlue animate-ping"></span>
-                    <span>Идет набор на новый учебный сезон</span>
+            <!-- Left Info Column -->
+            <div class="lg:col-span-7 space-y-8">
+                <div class="inline-flex items-center space-x-2 bg-blue-50 border border-blue-100 text-brandBlue px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider">
+                    <span class="w-2.5 h-2.5 rounded-full bg-brandBlue animate-ping"></span>
+                    <span>Открыт набор на новый учебный год</span>
                 </div>
                 
-                <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                    Экосистема качественного <span class="bg-gradient-to-r from-brandBlue to-brandCyan bg-clip-text text-transparent">образования</span>
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight text-brandText">
+                    Математика и точные науки без зазубривания
                 </h1>
                 
-                <p class="text-gray-400 text-lg sm:text-xl max-w-xl leading-relaxed">
-                    Преподаватели уровня ТОП-20 лицеев страны и победители олимпиад. Ведем ученика от школьных двоек до Всероса и МГУ / МФТИ.
+                <p class="text-brandMuted text-lg sm:text-xl max-w-2xl leading-relaxed">
+                    Преподаватели — сильные студенты и выпускники <span class="text-brandText font-bold underline decoration-brandBlue decoration-2">ТОП-5 вузов страны</span> (МФТИ, МГУ, ВШЭ). Помогаем подтянуть школьную базу, сдать ОГЭ/ЕГЭ на 95+ и победить на олимпиадах любого уровня.
                 </p>
 
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <button onclick="toggleModal(true)" class="bg-gradient-to-r from-brandBlue to-brandCyan text-darkBg font-display font-bold px-8 py-4 rounded-2xl hover:opacity-90 transition text-center shadow-lg shadow-brandBlue/20">
-                        Записаться на тест
-                    </button>
-                    <a href="#quiz" class="border border-gray-700 bg-slate-900/40 hover:bg-slate-900/80 transition text-center text-white font-semibold px-8 py-4 rounded-2xl flex items-center justify-center space-x-3">
-                        <span>Подобрать трек</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                <!-- Core Philosophy Banner -->
+                <div class="bg-blue-50/70 border border-blue-100/80 p-5 rounded-2xl max-w-xl flex items-start space-x-4">
+                    <div class="text-brandBlue text-xl mt-1"><i class="fa-solid fa-lightbulb"></i></div>
+                    <p class="text-xs sm:text-sm text-brandDarkBlue leading-relaxed">
+                        <strong>Наш железный принцип:</strong> Если ученик учится справляться с олимпиадной логикой, то школьные тесты, контрольные и стандартный ЕГЭ кажутся ему легкой разминкой. Мы учим мыслить, а не натаскиваем на шаблоны.
+                    </p>
                 </div>
 
-                <div class="grid grid-cols-3 gap-6 pt-6 border-t border-gray-800/80 max-w-lg">
-                    <div>
-                        <div class="text-2xl sm:text-3xl font-display font-bold text-white">10+</div>
-                        <div class="text-gray-500 text-xs sm:text-sm mt-1">Опытных учителей</div>
-                    </div>
-                    <div>
-                        <div class="text-2xl sm:text-3xl font-display font-bold text-brandBlue text-glow">92+</div>
-                        <div class="text-gray-500 text-xs sm:text-sm mt-1">Средний балл ЕГЭ</div>
-                    </div>
-                    <div>
-                        <div class="text-2xl sm:text-3xl font-display font-bold text-brandCyan">100%</div>
-                        <div class="text-gray-500 text-xs sm:text-sm mt-1">Понимания материала</div>
-                    </div>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <button onclick="toggleModal(true)" class="bg-brandBlue text-white font-display font-bold px-8 py-4 rounded-2xl hover:bg-brandDarkBlue transition text-center shadow-lg shadow-blue-600/20 text-sm">
+                        Начать обучение
+                    </button>
+                    <a href="#quiz" class="border border-slate-200 bg-white hover:bg-slate-50 transition text-center text-brandText font-semibold px-8 py-4 rounded-2xl flex items-center justify-center space-x-3 text-sm">
+                        <span>Подобрать преподавателя</span>
+                        <i class="fa-solid fa-arrow-right text-brandBlue text-xs"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- Hero Right Visual Column -->
-            <div class="md:col-span-5 relative">
-                <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brandBlue to-brandCyan opacity-30 blur-xl"></div>
-                <div class="relative bg-darkCard border border-gray-800 rounded-2xl p-6 sm:p-8 space-y-6">
-                    <div class="flex items-center justify-between border-b border-gray-800 pb-4">
-                        <span class="text-xs font-semibold text-gray-500 uppercase tracking-widest">Live-аналитика школы</span>
+            <!-- Right Visual Column (Founder & Vision block) -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative bg-white border border-slate-100 rounded-3xl p-6 sm:p-8 space-y-6 premium-shadow">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Основатель школы</span>
                         <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
                     </div>
                     
                     <div class="space-y-4">
-                        <div class="bg-slate-950/60 p-4 rounded-xl border border-gray-800/60 flex items-center justify-between">
-                            <div class="flex items-center space-x-3">
-                                <div class="bg-blue-900/30 p-2.5 rounded-lg text-brandBlue">
-                                    <i class="fa-solid fa-graduation-cap"></i>
-                                </div>
-                                <div>
-                                    <div class="text-sm font-semibold">Поступили в Лицеи</div>
-                                    <div class="text-xs text-gray-500">СУНЦ, НИУ ВШЭ, 1580</div>
-                                </div>
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex items-start space-x-4">
+                            <img src="telegram-cloud-photo-size-2-5463212144867348898-y.jpg" alt="Пётр Ванаг" class="w-16 h-16 rounded-xl object-cover shadow-sm border border-slate-200 flex-shrink-0" onerror="handleImageError(this, 'ПВ', 'from-blue-400 to-indigo-500')">
+                            <div>
+                                <h3 class="text-sm font-bold text-brandText">Пётр Ванаг</h3>
+                                <p class="text-xs text-brandMuted mt-1 leading-relaxed">
+                                    Дважды призёр регионального этапа ВсОШ по математике, призёр ММО, 95 баллов ЕГЭ. Прошел олимпиадную школу изнутри и знает, как довести до результата без выгорания.
+                                </p>
                             </div>
-                            <span class="text-brandBlue font-bold text-lg">+42</span>
                         </div>
 
-                        <div class="bg-slate-950/60 p-4 rounded-xl border border-gray-800/60 flex items-center justify-between">
-                            <div class="flex items-center space-x-3">
-                                <div class="bg-cyan-900/30 p-2.5 rounded-lg text-brandCyan">
-                                    <i class="fa-solid fa-trophy"></i>
-                                </div>
-                                <div>
-                                    <div class="text-sm font-semibold">Дипломы олимпиад</div>
-                                    <div class="text-xs text-gray-500">Всерос и Перечень</div>
-                                </div>
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex items-start space-x-4">
+                            <div class="bg-blue-100 text-brandBlue p-3 rounded-xl flex-shrink-0">
+                                <i class="fa-solid fa-user-group text-lg"></i>
                             </div>
-                            <span class="text-brandCyan font-bold text-lg">85%</span>
-                        </div>
-
-                        <div class="bg-slate-950/60 p-4 rounded-xl border border-gray-800/60 flex items-center justify-between">
-                            <div class="flex items-center space-x-3">
-                                <div class="bg-indigo-900/30 p-2.5 rounded-lg text-indigo-400">
-                                    <i class="fa-solid fa-chart-line"></i>
-                                </div>
-                                <div>
-                                    <div class="text-sm font-semibold">Средний балл</div>
-                                    <div class="text-xs text-gray-500">ЕГЭ/ОГЭ математика</div>
-                                </div>
+                            <div>
+                                <h3 class="text-sm font-bold text-brandText">Команда единомышленников</h3>
+                                <p class="text-xs text-brandMuted mt-1 leading-relaxed">
+                                    У нас нет «случайных» учителей. Наставники — победители ВсОШ, тренеры сборных областей и авторы олимпиадных задач.
+                                </p>
                             </div>
-                            <span class="text-indigo-400 font-bold text-lg">94.3</span>
                         </div>
-                    </div>
-
-                    <div class="bg-gradient-to-r from-brandBlue/10 to-transparent p-4 rounded-xl border border-brandBlue/20 text-xs text-gray-400 flex items-start space-x-2">
-                        <i class="fa-solid fa-quote-left text-brandBlue mt-0.5 text-sm"></i>
-                        <span>«Наша главная миссия — дать ученику интеллектуальный лифт, независимо от его стартовой подготовки.»</span>
                     </div>
                 </div>
             </div>
@@ -202,78 +177,79 @@
         </div>
     </section>
 
-    <!-- Philosophy / About Section -->
-    <section id="philosophy" class="py-24 bg-darkCard/30 border-y border-gray-800/60 relative">
+    <section id="philosophy" class="py-20 bg-slate-50/60 border-y border-slate-200/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="font-display text-3xl sm:text-4xl font-bold">Философия образования VANAGSTUDY</h2>
-                <p class="text-gray-400 text-lg">
-                    Мы не зубрим шаблоны решений. Наша цель — развить у ученика системное мышление и глубокую логику, которые сохранятся на всю жизнь.
+                <h2 class="font-display text-2xl sm:text-3xl font-bold text-brandText">Почему олимпиадный подход решает всё?</h2>
+                <p class="text-brandMuted text-sm sm:text-base">
+                    Мы помогаем ребятам перестать бояться сложных условий и нестандартных формулировок.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-darkCard border border-gray-800/80 p-8 rounded-2xl hover:border-brandBlue/50 transition duration-300 flex flex-col justify-between">
+                <!-- Card 1 -->
+                <div class="bg-white border border-slate-100 p-8 rounded-2xl premium-hover flex flex-col justify-between">
                     <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-blue-950 text-brandBlue flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-arrows-split-up-and-left"></i>
-                        </div>
-                        <h3 class="text-xl font-bold">Индивидуальный трек</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Составляем уникальную программу под уровень каждого ученика: от подтягивания школьной базы и домашних заданий до сложных задач повышенной трудности.
-                        </p>
-                    </div>
-                    <div class="pt-6 text-xs text-gray-500 uppercase tracking-widest font-semibold border-t border-gray-800/60 mt-6">Регулярная оценка прогресса</div>
-                </div>
-
-                <div class="bg-darkCard border border-gray-800/80 p-8 rounded-2xl hover:border-brandCyan/50 transition duration-300 flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-cyan-950 text-brandCyan flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-brain"></i>
-                        </div>
-                        <h3 class="text-xl font-bold">Понимание вместо зубрежки</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Объясняем фундаментальную физику, математику и информатику без скучных лекций. Обучаем логике построения формул, а не механическому заучиванию.
-                        </p>
-                    </div>
-                    <div class="pt-6 text-xs text-gray-500 uppercase tracking-widest font-semibold border-t border-gray-800/60 mt-6">Учим думать критически</div>
-                </div>
-
-                <div class="bg-darkCard border border-gray-800/80 p-8 rounded-2xl hover:border-indigo-500/50 transition duration-300 flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-indigo-950 text-indigo-400 flex items-center justify-center text-xl">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-brandBlue flex items-center justify-center text-xl">
                             <i class="fa-solid fa-circle-nodes"></i>
                         </div>
-                        <h3 class="text-xl font-bold">Гибкая траектория</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Ученик может плавно переходить между уровнями сложности: начав с закрытия школьных пробелов, можно выйти на уровень подготовки к олимпиадам.
+                        <h3 class="text-lg font-bold text-brandText">Школьная база без скуки</h3>
+                        <p class="text-brandMuted text-xs sm:text-sm leading-relaxed">
+                            Уроки часто превращаются в механическое заучивание формул. Мы объясняем, откуда они берутся, учим самостоятельно выводить правила и решать домашку быстро и легко.
                         </p>
                     </div>
-                    <div class="pt-6 text-xs text-gray-500 uppercase tracking-widest font-semibold border-t border-gray-800/60 mt-6">Адаптируемся под темп учащегося</div>
+                    <div class="pt-6 text-[10px] text-brandBlue uppercase tracking-widest font-semibold border-t border-slate-100 mt-6">Понимание вместо зубрёжки</div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white border border-slate-100 p-8 rounded-2xl premium-hover flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-brandBlue flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-brandText">ВсОШ и перечневые олимпиады</h3>
+                        <p class="text-brandMuted text-xs sm:text-sm leading-relaxed">
+                            Дипломы ВсОШ, «Высшей пробы» или «Ломоносова» — самый верный интеллектуальный лифт для поступления в ТОП вузы (МФТИ, ВШЭ, МГУ) БВИ (без вступительных экзаменов).
+                        </p>
+                    </div>
+                    <div class="pt-6 text-[10px] text-brandBlue uppercase tracking-widest font-semibold border-t border-slate-100 mt-6">Поступление на бюджет</div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white border border-slate-100 p-8 rounded-2xl premium-hover flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-brandBlue flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-shuffle"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-brandText">Переход в сильные лицеи</h3>
+                        <p class="text-brandMuted text-xs sm:text-sm leading-relaxed">
+                            Помогаем подготовиться и успешно пройти вступительные испытания в лучшие математические и естественно-научные школы страны (179 школа, СУНЦ, Лицей ВШЭ).
+                        </p>
+                    </div>
+                    <div class="pt-6 text-[10px] text-brandBlue uppercase tracking-widest font-semibold border-t border-slate-100 mt-6">Опережающий темп</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Subjects Section -->
-    <section id="subjects" class="py-24 max-w-7xl mx-auto px-6">
+    <section id="subjects" class="py-20 max-w-7xl mx-auto px-6">
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 class="font-display text-3xl sm:text-4xl font-bold">Ключевые направления</h2>
-            <p class="text-gray-400 text-lg">Нажмите на предмет, чтобы изучить наши подходы и особенности программы обучения.</p>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-brandText">Направления и дисциплины</h2>
+            <p class="text-brandMuted text-sm sm:text-base">Каждое направление ведут профильные эксперты с опытом личных побед.</p>
         </div>
 
-        <!-- Interactive Tabs for Subjects -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
+            <!-- Left Side Subject Selector Buttons -->
             <div class="lg:col-span-4 space-y-3">
                 <button 
                     onclick="selectSubject('math')"
                     id="tab-math"
-                    class="subject-tab w-full text-left p-5 rounded-2xl border transition duration-300 flex items-center justify-between bg-gradient-to-r from-brandBlue to-blue-900/40 border-brandBlue text-white"
+                    class="subject-tab w-full text-left p-5 rounded-2xl border transition duration-300 flex items-center justify-between bg-gradient-to-r from-blue-50 to-blue-100/50 border-blue-200 text-brandBlue"
                 >
                     <div class="flex items-center space-x-4">
-                        <span class="text-xl"><i class="fa-solid fa-calculator"></i></span>
-                        <span class="font-bold text-lg">Математика</span>
+                        <span class="text-xl"><i class="fa-solid fa-square-root-variable"></i></span>
+                        <span class="font-bold text-base sm:text-lg">Математика</span>
                     </div>
                     <i class="fa-solid fa-chevron-right text-xs"></i>
                 </button>
@@ -281,11 +257,11 @@
                 <button 
                     onclick="selectSubject('it')"
                     id="tab-it"
-                    class="subject-tab w-full text-left p-5 rounded-2xl border transition duration-300 flex items-center justify-between bg-darkCard/50 border-gray-800 text-gray-400 hover:border-gray-700"
+                    class="subject-tab w-full text-left p-5 rounded-2xl border transition duration-300 flex items-center justify-between bg-white border-slate-100 text-brandMuted hover:border-slate-200"
                 >
                     <div class="flex items-center space-x-4">
-                        <span class="text-xl"><i class="fa-solid fa-code"></i></span>
-                        <span class="font-bold text-lg">Информатика</span>
+                        <span class="text-xl"><i class="fa-solid fa-terminal"></i></span>
+                        <span class="font-bold text-base sm:text-lg">Информатика</span>
                     </div>
                     <i class="fa-solid fa-chevron-right text-xs"></i>
                 </button>
@@ -293,11 +269,11 @@
                 <button 
                     onclick="selectSubject('physics')"
                     id="tab-physics"
-                    class="subject-tab w-full text-left p-5 rounded-2xl border transition duration-300 flex items-center justify-between bg-darkCard/50 border-gray-800 text-gray-400 hover:border-gray-700"
+                    class="subject-tab w-full text-left p-5 rounded-2xl border transition duration-300 flex items-center justify-between bg-white border-slate-100 text-brandMuted hover:border-slate-200"
                 >
                     <div class="flex items-center space-x-4">
                         <span class="text-xl"><i class="fa-solid fa-atom"></i></span>
-                        <span class="font-bold text-lg">Физика</span>
+                        <span class="font-bold text-base sm:text-lg">Физика</span>
                     </div>
                     <i class="fa-solid fa-chevron-right text-xs"></i>
                 </button>
@@ -305,143 +281,185 @@
                 <button 
                     onclick="selectSubject('economics')"
                     id="tab-economics"
-                    class="subject-tab w-full text-left p-5 rounded-2xl border transition duration-300 flex items-center justify-between bg-darkCard/50 border-gray-800 text-gray-400 hover:border-gray-700"
+                    class="subject-tab w-full text-left p-5 rounded-2xl border transition duration-300 flex items-center justify-between bg-white border-slate-100 text-brandMuted hover:border-slate-200"
                 >
                     <div class="flex items-center space-x-4">
                         <span class="text-xl"><i class="fa-solid fa-chart-line"></i></span>
-                        <span class="font-bold text-lg">Экономика</span>
+                        <span class="font-bold text-base sm:text-lg">Экономика</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+
+                <button 
+                    onclick="selectSubject('english')"
+                    id="tab-english"
+                    class="subject-tab w-full text-left p-5 rounded-2xl border transition duration-300 flex items-center justify-between bg-white border-slate-100 text-brandMuted hover:border-slate-200"
+                >
+                    <div class="flex items-center space-x-4">
+                        <span class="text-xl"><i class="fa-solid fa-language"></i></span>
+                        <span class="font-bold text-base sm:text-lg">Английский язык</span>
                     </div>
                     <i class="fa-solid fa-chevron-right text-xs"></i>
                 </button>
             </div>
 
-            <!-- Dynamic Subject Panel -->
-            <div class="lg:col-span-8 bg-darkCard border border-gray-800 p-8 rounded-3xl min-h-[400px] flex flex-col justify-between">
+            <!-- Right Side Subject Details panels -->
+            <div class="lg:col-span-8 bg-white border border-slate-100 p-6 sm:p-8 rounded-3xl premium-shadow min-h-[380px] flex flex-col justify-between">
                 
                 <!-- Math Content -->
                 <div id="content-math" class="subject-content space-y-6">
-                    <div class="flex items-center space-x-3 text-brandBlue text-sm font-semibold uppercase tracking-widest">
+                    <div class="flex items-center space-x-3 text-brandBlue text-xs font-semibold uppercase tracking-widest">
                         <i class="fa-solid fa-star"></i>
-                        <span>Флагманское направление</span>
+                        <span>Наш главный фокус</span>
                     </div>
-                    <h3 class="font-display text-2xl font-bold">Математика: Золотой стандарт</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Мы ведем подготовку по всем уровням. Младшим классам прививаем любовь к предмету через логические игры и ребусы. Средней школе помогаем заложить прочный фундамент и сдать экзамены в топ-лицеи. Старшеклассников готовим к 90+ баллам на ЕГЭ и призовым местам во Всероссийской олимпиаде (ВсОШ) и перечневых олимпиадах («Высшая Проба», «Ломоносов», «Физтех»).
+                    <h3 class="font-display text-xl sm:text-2xl font-bold text-brandText">Математика: От ОГЭ до ВсОШ</h3>
+                    <p class="text-brandMuted text-sm sm:text-base leading-relaxed">
+                        Закрываем школьные пробелы по алгебре и геометрии, но главное — готовим к самым сложным вызовам. Под руководством действующих призеров и победителей олимпиад ученики учатся выходить за пределы шаблонов и щелкать задачи повышенной сложности как орехи.
                     </p>
-                    <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-gray-800/60">
+                    <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-brandCyan mt-1"></i>
-                            <span class="text-gray-300 text-sm">Олимпиадный уровень (Всерос, Перечень)</span>
+                            <i class="fa-solid fa-circle-check text-brandBlue mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Олимпиадный уровень (ВсОШ, «Высшая Проба», ММО)</span>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-brandCyan mt-1"></i>
-                            <span class="text-gray-300 text-sm">Спецмат и углубленная геометрия</span>
+                            <i class="fa-solid fa-circle-check text-brandBlue mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">ЕГЭ на 95+ и ОГЭ без единой ошибки</span>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-brandCyan mt-1"></i>
-                            <span class="text-gray-300 text-sm">Подготовка к ОГЭ/ЕГЭ Профиль</span>
+                            <i class="fa-solid fa-circle-check text-brandBlue mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Спецмат и вступительные экзамены в лицеи (179, СУНЦ)</span>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-brandCyan mt-1"></i>
-                            <span class="text-gray-300 text-sm">Поступление в сильные матшколы</span>
+                            <i class="fa-solid fa-circle-check text-brandBlue mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Школьная геометрия, развитие логики и пространственного мышления</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- IT Content -->
                 <div id="content-it" class="subject-content hidden space-y-6">
-                    <div class="flex items-center space-x-3 text-indigo-400 text-sm font-semibold uppercase tracking-widest">
-                        <i class="fa-solid fa-terminal"></i>
-                        <span>Разработка и алгоритмы</span>
+                    <div class="flex items-center space-x-3 text-indigo-600 text-xs font-semibold uppercase tracking-widest">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Программирование и алгоритмы</span>
                     </div>
-                    <h3 class="font-display text-2xl font-bold">Информатика и программирование</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Учим писать чистый код на Python, C++ и решать сложные алгоритмические задачи. Готовим к ЕГЭ, где упор делается на быструю и точную работу с компьютерными инструментами, а также к олимпиадам по программированию любого масштаба.
+                    <h3 class="font-display text-xl sm:text-2xl font-bold text-brandText">Информатика: Код как инструмент</h3>
+                    <p class="text-brandMuted text-sm sm:text-base leading-relaxed">
+                        Никакой скучной теории и сухого натаскивания на тесты. Учим писать чистый код на Python и C++, мыслить алгоритмически, понимать структуры данных. Тщательно готовим к ОГЭ и практическому ЕГЭ.
                     </p>
-                    <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-gray-800/60">
+                    <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-indigo-400 mt-1"></i>
-                            <span class="text-gray-300 text-sm">Изучение языков: Python, C++</span>
+                            <i class="fa-solid fa-circle-check text-indigo-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Подготовка к ОГЭ и ЕГЭ по информатике</span>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-indigo-400 mt-1"></i>
-                            <span class="text-gray-300 text-sm">Алгоритмы и структуры данных</span>
+                            <i class="fa-solid fa-circle-check text-indigo-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Обучение языкам программирования Python, C++</span>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-indigo-400 mt-1"></i>
-                            <span class="text-gray-300 text-sm">100% готовность к КЕГЭ</span>
+                            <i class="fa-solid fa-circle-check text-indigo-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Олимпиадный кодинг и разбор сложных алгоритмов</span>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-indigo-400 mt-1"></i>
-                            <span class="text-gray-300 text-sm">Разбор олимпиадного кодинга</span>
+                            <i class="fa-solid fa-circle-check text-indigo-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">С нуля до высоких результатов на практике</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Physics Content -->
                 <div id="content-physics" class="subject-content hidden space-y-6">
-                    <div class="flex items-center space-x-3 text-amber-400 text-sm font-semibold uppercase tracking-widest">
-                        <i class="fa-solid fa-vial"></i>
-                        <span>Понимание законов природы</span>
+                    <div class="flex items-center space-x-3 text-amber-600 text-xs font-semibold uppercase tracking-widest">
+                        <i class="fa-solid fa-vials"></i>
+                        <span>Законы природы</span>
                     </div>
-                    <h3 class="font-display text-2xl font-bold">Физика без зазубривания</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Мы показываем физику через призму реального мира. Объясняем механику, термодинамику и электродинамику так, что формулы становятся очевидными выводами из физических явлений. Тщательно разбираем олимпиадные кейсы и критерии оценивания ЕГЭ.
+                    <h3 class="font-display text-xl sm:text-2xl font-bold text-brandText">Физика: От сути к расчетам</h3>
+                    <p class="text-brandMuted text-sm sm:text-base leading-relaxed">
+                        Объясняем физические законы через реальные жизненные явления, а не механическое заучивание букв и формул. Когда ученик понимает физический смысл механики, термодинамики или электромагнетизма — формулы выводятся сами собой.
                     </p>
-                    <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-gray-800/60">
+                    <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-amber-400 mt-1"></i>
-                            <span class="text-gray-300 text-sm">Развитие физической интуиции</span>
+                            <i class="fa-solid fa-circle-check text-amber-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Подготовка к ОГЭ и ЕГЭ по физике</span>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-amber-400 mt-1"></i>
-                            <span class="text-gray-300 text-sm">Олимпиадные задачи (Максвелл, Росатом)</span>
+                            <i class="fa-solid fa-circle-check text-amber-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Олимпиады (Физтех, Шаг в будущее, Максвелл)</span>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-amber-400 mt-1"></i>
-                            <span class="text-gray-300 text-sm">Качественные разборы ОГЭ / ЕГЭ</span>
+                            <i class="fa-solid fa-circle-check text-amber-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Разбор расчетных и качественных физических кейсов</span>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-amber-400 mt-1"></i>
-                            <span class="text-gray-300 text-sm">Решение сложных расчетных задач</span>
+                            <i class="fa-solid fa-circle-check text-amber-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Развитие глубокой физической интуиции</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Economics Content -->
                 <div id="content-economics" class="subject-content hidden space-y-6">
-                    <div class="flex items-center space-x-3 text-emerald-400 text-sm font-semibold uppercase tracking-widest">
-                        <i class="fa-solid fa-dollar-sign"></i>
+                    <div class="flex items-center space-x-3 text-emerald-600 text-xs font-semibold uppercase tracking-widest">
+                        <i class="fa-solid fa-percent"></i>
                         <span>Количественные методы</span>
                     </div>
-                    <h3 class="font-display text-2xl font-bold">Олимпиадная Экономика</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Экономика — это прежде всего математика, логика и принятие рациональных решений. Мы разбираем теорию потребительского выбора, рыночные структуры, теорию игр, а также макроэкономику для олимпиад «Высшая Проба» и Всероса.
+                    <h3 class="font-display text-xl sm:text-2xl font-bold text-brandText">Экономика: Математический выбор</h3>
+                    <p class="text-brandMuted text-sm sm:text-base leading-relaxed">
+                        Олимпиадная экономика — это на 90% строгая математика, оптимизация функций и теория игр. Мы готовим к ВсОШ и перечневым олимпиадам («Высшая Проба»), разбирая микроэкономику, макроэкономику и методы количественного анализа под руководством лучших олимпиадных тренеров.
                     </p>
-                    <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-gray-800/60">
+                    <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
-                            <span class="text-gray-300 text-sm">Микроэкономика на математическом языке</span>
+                            <i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Микроэкономика, оптимизация и теория игр</span>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
-                            <span class="text-gray-300 text-sm">Разбор качественных макро-задач</span>
+                            <i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Подготовка к «Высшей Пробе» и ВсОШ</span>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
-                            <span class="text-gray-300 text-sm">Олимпиады 1-го и 2-го уровней</span>
+                            <i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Анализ качественных и расчетных макро-кейсов</span>
                         </div>
                         <div class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
-                            <span class="text-gray-300 text-sm">Теория игр и количественный анализ</span>
+                            <i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Логика принятия рациональных решений</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-8 pt-6 border-t border-gray-800 flex items-center justify-between">
-                    <span class="text-gray-400 text-sm">Готовы обсудить ваши цели?</span>
-                    <button onclick="toggleModal(true)" class="text-brandBlue font-semibold flex items-center space-x-2 hover:underline transition">
-                        <span>Оставить заявку на разбор</span>
+                <!-- English Content -->
+                <div id="content-english" class="subject-content hidden space-y-6">
+                    <div class="flex items-center space-x-3 text-violet-600 text-xs font-semibold uppercase tracking-widest">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>Языковая свобода</span>
+                    </div>
+                    <h3 class="font-display text-xl sm:text-2xl font-bold text-brandText">Английский язык: Свобода общения и ЕГЭ</h3>
+                    <p class="text-brandMuted text-sm sm:text-base leading-relaxed">
+                        Английский язык в VANAGSTUDY — это синергия разговорной свободы и строгого понимания формата экзаменов. Преподаватели с международными сертификатами (TOEFL C1) и зарубежным опытом обучения помогут убрать барьеры, освоить грамматику и сдать ОГЭ/ЕГЭ на 90+ баллов.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-circle-check text-violet-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Разговорный английский с полным погружением</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-circle-check text-violet-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Подготовка к ОГЭ и ЕГЭ по английскому языку</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-circle-check text-violet-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Освоение грамматики и расширение вокабуляра</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-circle-check text-violet-600 mt-1"></i>
+                            <span class="text-brandText text-xs sm:text-sm">Подготовка по стандартам TOEFL и IELTS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <span class="text-brandMuted text-xs sm:text-sm">Хотите обсудить траекторию обучения?</span>
+                    <button onclick="toggleModal(true)" class="text-brandBlue font-semibold flex items-center space-x-2 hover:underline text-sm">
+                        <span>Начать с диагностики</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </button>
                 </div>
@@ -450,421 +468,507 @@
         </div>
     </section>
 
-    <!-- Teachers Section -->
-    <section id="teachers" class="py-24 bg-darkCard/30 border-y border-gray-800/60">
+    <section id="team" class="py-20 bg-slate-100/40 border-t border-slate-200/50">
         <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 space-y-4 md:space-y-0">
-                <div class="space-y-4 max-w-2xl">
-                    <h2 class="font-display text-3xl sm:text-4xl font-bold">Наша команда экспертов</h2>
-                    <p class="text-gray-400 text-lg">
-                        Команда VANAGSTUDY — это действующие практики, олимпиадники прошлых лет и профессиональные методисты.
-                    </p>
-                </div>
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                <span class="text-xs font-bold text-brandBlue uppercase tracking-widest bg-blue-50 border border-blue-100 px-3 py-1 rounded-full">Наша гордость</span>
+                <h2 class="font-display text-2xl sm:text-3xl font-bold text-brandText">Команда VanagStudy</h2>
+                <p class="text-brandMuted text-sm sm:text-base">
+                    У нас нет «просто репетиторов». Каждый преподаватель — это личность с историей реальных побед на ВсОШ, ЕГЭ на 95–100 баллов и опытом преподавания.
+                </p>
                 
-                <!-- Filter Tabs -->
-                <div class="flex flex-wrap gap-2">
-                    <button onclick="filterTeachers('all')" id="teacher-btn-all" class="teacher-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm transition bg-brandBlue text-white">Все</button>
-                    <button onclick="filterTeachers('math')" id="teacher-btn-math" class="teacher-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm transition bg-darkCard hover:bg-slate-900 border border-gray-800 text-gray-400">Математика</button>
-                    <button onclick="filterTeachers('it')" id="teacher-btn-it" class="teacher-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm transition bg-darkCard hover:bg-slate-900 border border-gray-800 text-gray-400">Информатика</button>
-                    <button onclick="filterTeachers('physics')" id="teacher-btn-physics" class="teacher-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm transition bg-darkCard hover:bg-slate-900 border border-gray-800 text-gray-400">Физика</button>
-                    <button onclick="filterTeachers('economics')" id="teacher-btn-economics" class="teacher-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm transition bg-darkCard hover:bg-slate-900 border border-gray-800 text-gray-400">Экономика</button>
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 pt-4">
+                    <button onclick="filterTeam('all')" class="team-filter-btn px-4 py-2 text-xs font-semibold rounded-xl bg-brandBlue text-white shadow-sm transition">Все</button>
+                    <button onclick="filterTeam('math')" class="team-filter-btn px-4 py-2 text-xs font-semibold rounded-xl bg-white border border-slate-200 text-brandMuted hover:border-slate-300 transition">Математика</button>
+                    <button onclick="filterTeam('it')" class="team-filter-btn px-4 py-2 text-xs font-semibold rounded-xl bg-white border border-slate-200 text-brandMuted hover:border-slate-300 transition">Информатика</button>
+                    <button onclick="filterTeam('physics')" class="team-filter-btn px-4 py-2 text-xs font-semibold rounded-xl bg-white border border-slate-200 text-brandMuted hover:border-slate-300 transition">Физика</button>
+                    <button onclick="filterTeam('economics')" class="team-filter-btn px-4 py-2 text-xs font-semibold rounded-xl bg-white border border-slate-200 text-brandMuted hover:border-slate-300 transition">Экономика</button>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="teachers-grid">
-                
-                <!-- Teacher 1 -->
-                <div class="teacher-card bg-darkCard border border-gray-800 rounded-2xl p-6 hover:border-brandBlue/30 transition flex flex-col justify-between" data-subject="math">
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-brandBlue to-brandCyan flex items-center justify-center text-white text-xl font-display font-bold">АВ</div>
-                            <div>
-                                <h3 class="font-bold text-lg text-white">Александр Ванаг</h3>
-                                <div class="flex flex-wrap gap-1.5 mt-1">
-                                    <span class="bg-slate-950 text-brandCyan text-[11px] font-semibold px-2 py-0.5 rounded-full border border-brandCyan/20">Математика</span>
-                                    <span class="bg-slate-950 text-brandCyan text-[11px] font-semibold px-2 py-0.5 rounded-full border border-brandCyan/20">Олимпиады</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm leading-relaxed">Основатель школы. Выпускник МФТИ. Победитель Всероссийской олимпиады школьников. Преподает более 7 лет.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-800/60 mt-6 flex justify-between items-center">
-                        <span class="text-xs text-gray-500">Топовые разборы и ведение</span>
-                        <span onclick="toggleModal(true)" class="text-brandBlue text-xs font-semibold cursor-pointer hover:underline">Узнать свободные часы →</span>
-                    </div>
-                </div>
-
-                <!-- Teacher 2 -->
-                <div class="teacher-card bg-darkCard border border-gray-800 rounded-2xl p-6 hover:border-brandBlue/30 transition flex flex-col justify-between" data-subject="it">
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-brandBlue to-brandCyan flex items-center justify-center text-white text-xl font-display font-bold">ДП</div>
-                            <div>
-                                <h3 class="font-bold text-lg text-white">Дмитрий П.</h3>
-                                <div class="flex flex-wrap gap-1.5 mt-1">
-                                    <span class="bg-slate-950 text-brandCyan text-[11px] font-semibold px-2 py-0.5 rounded-full border border-brandCyan/20">Информатика</span>
-                                    <span class="bg-slate-950 text-brandCyan text-[11px] font-semibold px-2 py-0.5 rounded-full border border-brandCyan/20">ЕГЭ</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm leading-relaxed">Разработчик в Яндекс. Готовит к ЕГЭ по информатике на 90+. Эксперт по Python и C++.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-800/60 mt-6 flex justify-between items-center">
-                        <span class="text-xs text-gray-500">Топовые разборы и ведение</span>
-                        <span onclick="toggleModal(true)" class="text-brandBlue text-xs font-semibold cursor-pointer hover:underline">Узнать свободные часы →</span>
-                    </div>
-                </div>
-
-                <!-- Teacher 3 -->
-                <div class="teacher-card bg-darkCard border border-gray-800 rounded-2xl p-6 hover:border-brandBlue/30 transition flex flex-col justify-between" data-subject="physics">
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-brandBlue to-brandCyan flex items-center justify-center text-white text-xl font-display font-bold">ЕС</div>
-                            <div>
-                                <h3 class="font-bold text-lg text-white">Елена С.</h3>
-                                <div class="flex flex-wrap gap-1.5 mt-1">
-                                    <span class="bg-slate-950 text-brandCyan text-[11px] font-semibold px-2 py-0.5 rounded-full border border-brandCyan/20">Физика</span>
-                                    <span class="bg-slate-950 text-brandCyan text-[11px] font-semibold px-2 py-0.5 rounded-full border border-brandCyan/20">Лицеи</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm leading-relaxed">Выпускница МГУ им. Ломоносова. Специализируется на подготовке к внутренним экзаменам сильных физмат лицеев.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-800/60 mt-6 flex justify-between items-center">
-                        <span class="text-xs text-gray-500">Топовые разборы и ведение</span>
-                        <span onclick="toggleModal(true)" class="text-brandBlue text-xs font-semibold cursor-pointer hover:underline">Узнать свободные часы →</span>
-                    </div>
-                </div>
-
-                <!-- Teacher 4 -->
-                <div class="teacher-card bg-darkCard border border-gray-800 rounded-2xl p-6 hover:border-brandBlue/30 transition flex flex-col justify-between" data-subject="economics">
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-brandBlue to-brandCyan flex items-center justify-center text-white text-xl font-display font-bold">АМ</div>
-                            <div>
-                                <h3 class="font-bold text-lg text-white">Артем М.</h3>
-                                <div class="flex flex-wrap gap-1.5 mt-1">
-                                    <span class="bg-slate-950 text-brandCyan text-[11px] font-semibold px-2 py-0.5 rounded-full border border-brandCyan/20">Экономика</span>
-                                    <span class="bg-slate-950 text-brandCyan text-[11px] font-semibold px-2 py-0.5 rounded-full border border-brandCyan/20">Олимпиады</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm leading-relaxed">Призер олимпиады «Высшая Проба». Преподаватель олимпиадной микро- и макроэкономики.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-800/60 mt-6 flex justify-between items-center">
-                        <span class="text-xs text-gray-500">Топовые разборы и ведение</span>
-                        <span onclick="toggleModal(true)" class="text-brandBlue text-xs font-semibold cursor-pointer hover:underline">Узнать свободные часы →</span>
-                    </div>
-                </div>
-
-                <!-- Teacher 5 -->
-                <div class="teacher-card bg-darkCard border border-gray-800 rounded-2xl p-6 hover:border-brandBlue/30 transition flex flex-col justify-between" data-subject="math">
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-brandBlue to-brandCyan flex items-center justify-center text-white text-xl font-display font-bold">ВК</div>
-                            <div>
-                                <h3 class="font-bold text-lg text-white">Виктория К.</h3>
-                                <div class="flex flex-wrap gap-1.5 mt-1">
-                                    <span class="bg-slate-950 text-brandCyan text-[11px] font-semibold px-2 py-0.5 rounded-full border border-brandCyan/20">Математика</span>
-                                    <span class="bg-slate-950 text-brandCyan text-[11px] font-semibold px-2 py-0.5 rounded-full border border-brandCyan/20">Школьная база</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm leading-relaxed">Мастер находить общий язык с младшими школьниками. Закрывает пробелы и объясняет сложные темы на пальцах.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-800/60 mt-6 flex justify-between items-center">
-                        <span class="text-xs text-gray-500">Топовые разборы и ведение</span>
-                        <span onclick="toggleModal(true)" class="text-brandBlue text-xs font-semibold cursor-pointer hover:underline">Узнать свободные часы →</span>
-                    </div>
-                </div>
-
-                <!-- Teacher 6 -->
-                <div class="teacher-card bg-darkCard border border-gray-800 rounded-2xl p-6 hover:border-brandBlue/30 transition flex flex-col justify-between" data-subject="math">
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-brandBlue to-brandCyan flex items-center justify-center text-white text-xl font-display font-bold">МТ</div>
-                            <div>
-                                <h3 class="font-bold text-lg text-white">Михаил Т.</h3>
-                                <div class="flex flex-wrap gap-1.5 mt-1">
-                                    <span class="bg-slate-950 text-brandCyan text-[11px] font-semibold px-2 py-0.5 rounded-full border border-brandCyan/20">Олимпиадная Математика</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 text-sm leading-relaxed">Член жюри нескольких региональных математических боев. Готовит к перечневым олимпиадам 1-2 уровней.</p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-800/60 mt-6 flex justify-between items-center">
-                        <span class="text-xs text-gray-500">Топовые разборы и ведение</span>
-                        <span onclick="toggleModal(true)" class="text-brandBlue text-xs font-semibold cursor-pointer hover:underline">Узнать свободные часы →</span>
-                    </div>
-                </div>
-
+            <!-- Teachers Grid (JavaScript dynamic injection) -->
+            <div id="teachers-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Teacher Cards will be rendered dynamically by JS -->
             </div>
-
         </div>
     </section>
 
-    <!-- Course Price Calculator -->
-    <section id="calculator" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <div class="lg:col-span-5 space-y-6">
-                <h2 class="font-display text-3xl sm:text-4xl font-bold">Рассчитайте персональный трек</h2>
-                <p class="text-gray-400 text-base leading-relaxed">
-                    Выберите нужный уровень подготовки и количество желаемых занятий в месяц. Наша ценовая политика прозрачна, а для комплексных пакетов предусмотрены скидки.
-                </p>
-                <div class="space-y-4 pt-4">
-                    <div class="flex items-center space-x-3 text-sm text-gray-300">
-                        <i class="fa-solid fa-gift text-brandCyan"></i>
-                        <span>Скидка 5% при оплате от 8 занятий</span>
-                    </div>
-                    <div class="flex items-center space-x-3 text-sm text-gray-300">
-                        <i class="fa-solid fa-fire text-brandCyan"></i>
-                        <span>Скидка 10% при оплате от 12 занятий</span>
-                    </div>
-                    <div class="flex items-center space-x-3 text-sm text-gray-300">
-                        <i class="fa-solid fa-shield-halved text-brandCyan"></i>
-                        <span>Бесплатное тестирование уровня на старте</span>
-                    </div>
-                </div>
+    <section id="prices" class="py-20 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <h2 class="font-display text-2xl sm:text-3xl font-bold text-brandText">Понятная и честная стоимость</h2>
+                <p class="text-brandMuted text-sm sm:text-base">Никаких скрытых платежей или сложных подписок. Платите только за реальные часы с профессионалами.</p>
             </div>
 
-            <div class="lg:col-span-7 bg-darkCard border border-gray-800 rounded-3xl p-6 sm:p-8 space-y-8 relative">
-                <div class="absolute inset-0 bg-brandBlue/[0.02] rounded-3xl"></div>
-                
-                <div class="space-y-6 relative z-10">
-                    <!-- Select Level -->
-                    <div class="space-y-3">
-                        <label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Уровень подготовки</label>
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                            <button onclick="setCalcLevel('school')" id="lvl-school" class="level-btn p-3 rounded-xl border text-center transition flex flex-col justify-center items-center bg-brandBlue border-brandBlue text-white">
-                                <span class="font-bold text-sm">База</span>
-                                <span class="text-[10px] opacity-70">Успеваемость</span>
-                            </button>
-                            <button onclick="setCalcLevel('lyceum')" id="lvl-lyceum" class="level-btn p-3 rounded-xl border text-center transition flex flex-col justify-center items-center bg-slate-950 border-gray-800 text-gray-400 hover:border-gray-700">
-                                <span class="font-bold text-sm">Лицеи</span>
-                                <span class="text-[10px] opacity-70">Перевод</span>
-                            </button>
-                            <button onclick="setCalcLevel('ege')" id="lvl-ege" class="level-btn p-3 rounded-xl border text-center transition flex flex-col justify-center items-center bg-slate-950 border-gray-800 text-gray-400 hover:border-gray-700">
-                                <span class="font-bold text-sm">ЕГЭ/ОГЭ</span>
-                                <span class="text-[10px] opacity-70">Экзамены</span>
-                            </button>
-                            <button onclick="setCalcLevel('olympiad')" id="lvl-olympiad" class="level-btn p-3 rounded-xl border text-center transition flex flex-col justify-center items-center bg-slate-950 border-gray-800 text-gray-400 hover:border-gray-700">
-                                <span class="font-bold text-sm">Олимпиады</span>
-                                <span class="text-[10px] opacity-70">ВсОШ / ВУЗы</span>
-                            </button>
-                        </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Individual Lessons -->
+                <div class="bg-white border-2 border-brandBlue/30 p-8 rounded-3xl premium-shadow relative flex flex-col justify-between">
+                    <div class="absolute -top-4 left-6 bg-brandBlue text-white text-[10px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md">
+                        Основной формат
                     </div>
-
-                    <!-- Number of Lessons slider -->
-                    <div class="space-y-3">
-                        <div class="flex justify-between items-center">
-                            <label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Занятий в месяц</label>
-                            <span id="lesson-counter-label" class="text-brandCyan font-bold">4 урока</span>
-                        </div>
-                        <input 
-                            id="lessons-slider"
-                            type="range" 
-                            min="4" 
-                            max="16" 
-                            step="1" 
-                            value="4"
-                            oninput="setCalcLessons(this.value)"
-                            class="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-brandBlue border border-gray-800"
-                        />
-                        <div class="flex justify-between text-[11px] text-gray-500">
-                            <span>4 урока (раз в неделю)</span>
-                            <span>8 уроков (дважды в неделю)</span>
-                            <span>16 уроков (интенсив)</span>
-                        </div>
-                    </div>
-
-                    <!-- Result section -->
-                    <div class="bg-slate-950 border border-gray-800/80 p-5 rounded-2xl flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                    
+                    <div class="space-y-6">
                         <div>
-                            <div class="text-xs text-gray-500">Примерная стоимость курса в месяц:</div>
-                            <div class="text-3xl font-display font-bold text-white mt-1">~ <span id="total-price-display">7 200</span> <span class="text-sm font-sans font-normal text-gray-400">₽</span></div>
+                            <h3 class="font-display text-lg font-bold text-brandText">Индивидуальные занятия</h3>
+                            <p class="text-xs text-brandMuted mt-1">Один на один с выбранным наставником</p>
                         </div>
-                        <button onclick="toggleModal(true)" class="w-full sm:w-auto bg-brandBlue hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl transition">
-                            Забронировать
-                        </button>
+                        
+                        <div class="flex items-baseline space-x-2">
+                            <span class="text-4xl font-display font-bold text-brandText">2 500 ₽</span>
+                            <span class="text-brandMuted text-sm">/ час (60 мин)</span>
+                        </div>
+
+                        <ul class="space-y-3.5 text-xs sm:text-sm text-brandMuted border-t border-slate-100 pt-6">
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-circle-check text-brandBlue text-base"></i>
+                                <span>Абсолютно любая цель: от сложного ДЗ до ВсОШ</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-circle-check text-brandBlue text-base"></i>
+                                <span>Индивидуальный темп, фокус только на ваших проблемах</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-circle-check text-brandBlue text-base"></i>
+                                <span>Постоянная связь и отчетность для родителей</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-circle-check text-brandBlue text-base"></i>
+                                <span>Удобное, гибкое расписание под ученика</span>
+                            </li>
+                        </ul>
                     </div>
+
+                    <button onclick="toggleModal(true)" class="w-full bg-brandBlue hover:bg-brandDarkBlue text-white font-semibold py-3.5 rounded-2xl transition mt-8 text-sm shadow-md shadow-blue-600/10">
+                        Записаться на диагностику
+                    </button>
                 </div>
 
+                <!-- Group Lessons -->
+                <div class="bg-white border border-slate-100 p-8 rounded-3xl premium-hover flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-display text-lg font-bold text-brandText">Мини-группы (до 10 чел)</h3>
+                                <span class="bg-amber-50 text-amber-700 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-200">Лист ожидания</span>
+                            </div>
+                            <p class="text-xs text-brandMuted mt-1">Открываем группы по мере формирования набора</p>
+                        </div>
+                        
+                        <div class="flex items-baseline space-x-2">
+                            <span class="text-3xl font-display font-bold text-brandText">500 – 800 ₽</span>
+                            <span class="text-brandMuted text-sm">/ час (60 мин)</span>
+                        </div>
+
+                        <ul class="space-y-3.5 text-xs sm:text-sm text-brandMuted border-t border-slate-100 pt-6">
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-circle-check text-slate-400 text-base"></i>
+                                <span>Занятия в небольших группах по схожему уровню</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-circle-check text-slate-400 text-base"></i>
+                                <span>Элементы здоровой конкуренции и работы в команде</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-circle-check text-slate-400 text-base"></i>
+                                <span>Записи всех уроков доступны в личном кабинете</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fa-solid fa-circle-check text-slate-400 text-base"></i>
+                                <span>Зафиксируйте минимальную цену прямо сейчас</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="toggleModal(true)" class="w-full border border-slate-200 bg-slate-50 hover:bg-slate-100 text-brandText font-semibold py-3.5 rounded-2xl transition mt-8 text-sm">
+                        Записаться в лист ожидания
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Multi-step Interactive Track Finder Quiz -->
-    <section id="quiz" class="py-24 bg-darkCard/20 border-t border-gray-800/60 relative">
-        <div class="max-w-4xl mx-auto px-6">
-            
-            <div class="text-center space-y-4 mb-12">
-                <span class="text-brandCyan text-xs font-semibold uppercase tracking-widest bg-cyan-950/40 border border-brandCyan/20 px-3 py-1 rounded-full">Интерактивный тест</span>
-                <h2 class="font-display text-2xl sm:text-3xl font-bold">Определите свой оптимальный образовательный трек</h2>
-                <p class="text-gray-400 text-sm max-w-lg mx-auto">Пройдите быстрый опрос из 3 вопросов, чтобы мы подобрали вам идеального наставника.</p>
-            </div>
+    <section id="quiz" class="py-20 max-w-4xl mx-auto px-6">
+        <div class="text-center space-y-4 mb-12">
+            <span class="text-brandBlue text-xs font-semibold uppercase tracking-widest bg-blue-50 border border-blue-100 px-3.5 py-1.5 rounded-full">Простой тест за 30 секунд</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-brandText">Определите свой оптимальный образовательный трек</h2>
+            <p class="text-brandMuted text-xs sm:text-sm max-w-xl mx-auto">
+                Ответьте на 3 простых вопроса, чтобы наш скрипт подобрал оптимальный профиль подготовки, формат занятий и рекомендованного преподавателя под ваши цели.
+            </p>
+        </div>
 
-            <div class="bg-darkCard border border-gray-800 rounded-3xl p-6 sm:p-10 relative overflow-hidden" id="quiz-container">
-                
-                <!-- Steps will be rendered dynamically by JavaScript -->
-                <div id="quiz-step-view" class="space-y-6">
-                    <!-- Dynamic injection of question -->
-                </div>
-
-            </div>
-
+        <!-- Interactive Quiz Container -->
+        <div class="bg-white border border-slate-100 rounded-3xl p-6 sm:p-10 premium-shadow relative overflow-hidden" id="quiz-container">
+            <!-- Dynamic step contents rendered by JavaScript -->
+            <div id="quiz-step-view" class="space-y-6"></div>
         </div>
     </section>
 
-    <!-- CTA / Telegram Community -->
-    <section class="py-24 max-w-7xl mx-auto px-6 text-center relative overflow-hidden">
-        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brandBlue to-brandCyan opacity-10 blur-xl"></div>
-        <div class="relative bg-darkCard border border-gray-800/80 p-10 sm:p-16 rounded-3xl space-y-8">
-            
+    <section class="py-20 bg-slate-100/40 border-t border-slate-200/50 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 space-y-8">
             <div class="max-w-2xl mx-auto space-y-4">
-                <h2 class="font-display text-3xl sm:text-4xl font-bold">Остались вопросы или хотите пробный урок?</h2>
-                <p class="text-gray-400 text-base sm:text-lg">
-                    Напишите нам напрямую. Мы поможем определить уровень ученика, подберем индивидуального преподавателя и выстроим дорожную карту.
+                <h2 class="font-display text-2xl sm:text-3xl font-bold text-brandText">Остались вопросы или хотите пробный урок?</h2>
+                <p class="text-brandMuted text-sm sm:text-base">
+                    Мы на связи и готовы проконсультировать вас по любым академическим целям. Свяжитесь напрямую или закажите бесплатную диагностику!
                 </p>
             </div>
 
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="https://t.me/vanagstudy" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-[#24A1DE] hover:bg-[#1E88BE] text-white font-display font-bold px-8 py-4 rounded-2xl flex items-center justify-center space-x-3 transition">
-                    <i class="fa-brands fa-telegram text-xl"></i>
-                    <span>Связаться в Telegram</span>
+            <!-- Diverse Contact Buttons -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+                <!-- Direct Call -->
+                <a href="tel:+79991234567" class="bg-brandBlue hover:bg-brandDarkBlue text-white font-semibold py-4 rounded-2xl flex items-center justify-center space-x-3 transition premium-shadow">
+                    <i class="fa-solid fa-phone text-lg animate-pulse"></i>
+                    <span>Позвонить нам</span>
                 </a>
-                <button onclick="toggleModal(true)" class="w-full sm:w-auto border border-gray-700 bg-slate-950/40 hover:bg-slate-950/80 text-white font-semibold px-8 py-4 rounded-2xl transition">
-                    Заказать звонок
+                
+                <!-- Telegram Direct link -->
+                <a href="https://t.me/vanagstudy" target="_blank" rel="noopener noreferrer" class="bg-[#24A1DE] hover:bg-[#1E88BE] text-white font-semibold py-4 rounded-2xl flex items-center justify-center space-x-3 transition premium-shadow">
+                    <i class="fa-brands fa-telegram text-xl"></i>
+                    <span>Наш Telegram</span>
+                </a>
+
+                <button onclick="toggleModal(true)" class="border border-slate-200 bg-white hover:bg-slate-50 text-brandText font-semibold py-4 rounded-2xl flex items-center justify-center space-x-3 transition premium-shadow">
+                    <i class="fa-solid fa-headset text-brandBlue"></i>
+                    <span>Заказать звонок</span>
                 </button>
             </div>
 
-            <div class="pt-6 border-t border-gray-800/60 text-xs text-gray-500 max-w-md mx-auto">
-                Подпишитесь на наш телеграм-канал <a href="https://t.me/vanagstudy" target="_blank" rel="noopener noreferrer" class="text-brandCyan hover:underline">@vanagstudy</a>. Там регулярно публикуются полезные материалы, разборы олимпиад и анонсы.
+            <div class="pt-6 border-t border-slate-200/60 text-xs text-brandMuted max-w-md mx-auto">
+                Подписывайтесь на наш телеграм-канал <a href="https://t.me/vanagstudy" target="_blank" rel="noopener noreferrer" class="text-brandBlue hover:underline font-bold">@vanagstudy</a>. Мы регулярно делимся разборами олимпиадных задач и анонсами.
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-darkBg border-t border-gray-900 py-12 mt-auto">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-sm text-gray-500">
+    <footer class="bg-white border-t border-slate-100 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-xs text-brandMuted">
             <div class="flex items-center space-x-3">
-                <span class="font-display font-bold text-base tracking-widest text-white">
-                    VANAG<span class="text-brandBlue">STUDY</span>
+                <span class="font-display font-bold text-base tracking-widest text-brandText">
+                    VANAG<span class="text-brandBlue font-extrabold">STUDY</span>
                 </span>
             </div>
             
-            <div class="flex flex-wrap gap-6 justify-center text-xs">
-                <a href="#philosophy" class="hover:text-white transition">Философия</a>
-                <a href="#subjects" class="hover:text-white transition">Направления</a>
-                <a href="#teachers" class="hover:text-white transition">Команда</a>
-                <a href="https://t.me/vanagstudy" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">TG Сообщество</a>
+            <div class="flex flex-wrap gap-6 justify-center">
+                <a href="#philosophy" class="hover:text-brandBlue transition">Принцип</a>
+                <a href="#subjects" class="hover:text-brandBlue transition">Направления</a>
+                <a href="#team" class="hover:text-brandBlue transition">Преподаватели</a>
+                <a href="#prices" class="hover:text-brandBlue transition">Стоимость</a>
+                <a href="https://t.me/vanagstudy" target="_blank" rel="noopener noreferrer" class="hover:text-brandBlue transition font-bold">TG Канал</a>
             </div>
 
-            <div class="text-xs">
-                © 2026 VANAGSTUDY. Все права защищены. | Качественное STEM образование.
+            <div>
+                © 2026 VANAGSTUDY. Все права защищены. | Честная подготовка к олимпиадам и экзаменам.
             </div>
         </div>
     </footer>
 
-    <!-- Lead Capture Modal Dialog -->
-    <div id="lead-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-darkBg/90 backdrop-blur-sm hidden">
-        <div class="relative w-full max-w-lg bg-darkCard border border-gray-800 rounded-3xl p-6 sm:p-8 space-y-6">
+    <div id="lead-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm hidden">
+        <div class="relative w-full max-w-lg bg-white border border-slate-100 rounded-3xl p-6 sm:p-8 space-y-6 premium-shadow">
             
             <button 
                 onclick="toggleModal(false)"
-                class="absolute top-4 right-4 text-gray-400 hover:text-white transition text-xl p-1"
+                class="absolute top-4 right-4 text-brandMuted hover:text-brandText transition text-xl p-1"
             >
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <!-- Regular Form -->
+            <!-- Standard Lead Form -->
             <form id="lead-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
                 <div class="space-y-2">
-                    <h3 class="font-display text-xl font-bold">Заявка на обучение</h3>
-                    <p class="text-gray-400 text-xs">Оставьте ваши контакты, и наш методист проведет первичную оценку знаний бесплатно.</p>
+                    <h3 class="font-display text-xl font-bold text-brandText">Заявка на обучение</h3>
+                    <p class="text-brandMuted text-xs">Оставьте контактные данные. Пётр или дежурный преподаватель напишет вам в Telegram или перезвонит для согласования целей.</p>
                 </div>
 
                 <div class="space-y-1.5">
-                    <label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Имя ученика / родителя</label>
-                    <input required type="text" placeholder="Александр" class="w-full bg-slate-950 border border-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandBlue text-white" />
+                    <label class="text-xs font-semibold text-brandMuted uppercase tracking-wider">Имя ученика или родителя</label>
+                    <input required type="text" id="form-name" placeholder="Иван" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandBlue focus:bg-white text-brandText transition" />
                 </div>
 
                 <div class="space-y-1.5">
-                    <label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Ник в Telegram (желательно) или телефон</label>
-                    <input required type="text" placeholder="@alex_vanag или +7 (999) 000-00-00" class="w-full bg-slate-950 border border-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandBlue text-white" />
+                    <label class="text-xs font-semibold text-brandMuted uppercase tracking-wider">Контакты (Ник в Telegram или телефон)</label>
+                    <input required type="text" id="form-contact" placeholder="@username или +7 (999) 000-00-00" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandBlue focus:bg-white text-brandText transition" />
                 </div>
 
                 <div class="space-y-1.5">
-                    <label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Предмет для подготовки</label>
-                    <select class="w-full bg-slate-950 border border-gray-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandBlue text-white">
-                        <option>Математика</option>
-                        <option>Информатика</option>
-                        <option>Физика</option>
-                        <option>Экономика</option>
-                        <option>Другое / Комплекс предметов</option>
+                    <label class="text-xs font-semibold text-brandMuted uppercase tracking-wider">Основная цель / Предмет</label>
+                    <select id="form-subject" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandBlue focus:bg-white text-brandText transition">
+                        <option>Математика (Олимпиады / ВсОШ)</option>
+                        <option>Математика (ОГЭ / ЕГЭ / Школа)</option>
+                        <option>Информатика (ЕГЭ / ОГЭ)</option>
+                        <option>Физика (Олимпиады / Школа)</option>
+                        <option>Экономика (Олимпиады)</option>
+                        <option>Английский язык (ОГЭ / ЕГЭ / Разговорный)</option>
+                        <option>Другое / Комплексный трек</option>
                     </select>
                 </div>
 
                 <div class="space-y-1.5">
-                    <label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Формат занятий</label>
+                    <label class="text-xs font-semibold text-brandMuted uppercase tracking-wider">Желаемый формат занятий</label>
                     <div class="grid grid-cols-2 gap-2 text-xs">
-                        <button type="button" id="class-type-individual" onclick="setClassType('individual')" class="p-3 rounded-xl border bg-brandBlue/20 border-brandBlue text-white">
-                            Индивидуально
+                        <button type="button" id="class-type-individual" onclick="setClassType('individual')" class="p-3 rounded-xl border bg-blue-50 border-brandBlue text-brandBlue font-bold transition">
+                            Индивидуально (2500 ₽)
                         </button>
-                        <button type="button" id="class-type-group" onclick="setClassType('group')" class="p-3 rounded-xl border bg-slate-950 border-gray-800 text-gray-400">
-                            Мини-группы (до 4 чел)
+                        <button type="button" id="class-type-group" onclick="setClassType('group')" class="p-3 rounded-xl border bg-slate-50 border-slate-200 text-brandMuted transition">
+                            Мини-группы (Лист ожидания)
                         </button>
                     </div>
                 </div>
 
-                <button type="submit" class="w-full bg-gradient-to-r from-brandBlue to-brandCyan text-darkBg font-display font-bold py-3.5 rounded-xl hover:opacity-90 transition mt-4 text-sm shadow-lg shadow-brandBlue/10">
+                <button type="submit" class="w-full bg-brandBlue text-white font-display font-bold py-3.5 rounded-xl hover:bg-brandDarkBlue transition mt-4 text-sm shadow-md shadow-blue-600/10">
                     Отправить заявку
                 </button>
                 
-                <div class="text-[10px] text-gray-500 text-center">
-                    Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. Мы не шлем спам.
+                <div class="text-[10px] text-brandMuted text-center">
+                    Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
                 </div>
             </form>
 
             <!-- Success message -->
-            <div id="success-container" class="text-center py-8 space-y-4 hidden animate-fade-in">
-                <div class="w-16 h-16 bg-emerald-950 border border-emerald-500 text-emerald-400 rounded-full flex items-center justify-center text-3xl mx-auto">
+            <div id="success-container" class="text-center py-8 space-y-4 hidden">
+                <div class="w-16 h-16 bg-emerald-50 border border-emerald-300 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto">
                     <i class="fa-solid fa-paper-plane animate-bounce"></i>
                 </div>
-                <h3 class="font-display text-xl font-bold">Спасибо за заявку!</h3>
-                <p class="text-gray-400 text-sm">Мы свяжемся с вами в Telegram или по телефону в течение 1 часа для согласования деталей.</p>
+                <h3 class="font-display text-xl font-bold text-brandText">Заявка отправлена!</h3>
+                <p class="text-brandMuted text-xs sm:text-sm">Мы свяжемся с вами в Telegram или по телефону в ближайшее время!</p>
             </div>
 
         </div>
     </div>
 
-    <!-- Custom interactive JavaScript state & behavior logic -->
     <script>
+        // Преподаватели (Вся база данных с обновленными реальными фотографиями)
+        const teachers = [
+            {
+                name: "Пётр Ванаг",
+                role: "Преподаватель математики, основатель",
+                bio: "Дважды призёр регионального этапа ВсОШ, призёр ММО, 95 баллов ЕГЭ. Профессионально перевелся в педагогический вуз, осознав, что его настоящее призвание — преподавать математику. Ведёт ОГЭ/ЕГЭ по математике.",
+                tags: ["Основатель", "ВсОШ Призёр", "ОГЭ/ЕГЭ Математика"],
+                category: ["math"],
+                color: "from-blue-400 to-indigo-500",
+                initials: "ПВ",
+                image: "telegram-cloud-photo-size-2-5463212144867348898-y.jpg"
+            },
+            {
+                name: "Мишель Запольски",
+                role: "Методист олимпиадных курсов и преподаватель",
+                bio: "Трёхкратный призёр ВсОШ, победитель ММО и «Высшей Пробы», студент ПМИ ВШЭ. Проверял региональный этап ВсОШ, создает передовые программы подготовки к олимпиадам любого уровня.",
+                tags: ["Методист", "ВсОШ Призёр", "ВШЭ ПМИ"],
+                category: ["math"],
+                color: "from-purple-400 to-pink-500",
+                initials: "МЗ",
+                image: "telegram-cloud-photo-size-2-5462976205133910944-x.jpg"
+            },
+            {
+                name: "Павел Маляренко",
+                role: "Преподаватель математики и олимпиадной экономики",
+                bio: "Двукратный призёр ВсОШ по экономике, тренер сборных Московской области и Татарстана, 99 баллов за ЕГЭ по математике. Готовит к ЕГЭ и олимпиадной математике и экономике.",
+                tags: ["Тренер Сборных", "99 баллов ЕГЭ", "Экономика", "Математика"],
+                category: ["math", "economics"],
+                color: "from-emerald-400 to-teal-500",
+                initials: "ПМ",
+                image: "telegram-cloud-photo-size-2-5460960345053665954-y.jpg"
+            },
+            {
+                name: "Олег Тутукин",
+                role: "Преподаватель по математике",
+                bio: "Выпускник знаменитой 179 школы, 95 баллов за ЕГЭ, призёр ММО и Всесибирской олимпиады. Качественно готовит ребят к успешной сдаче ОГЭ и ЕГЭ по математике.",
+                tags: ["Выпускник 179", "ММО Призёр", "ОГЭ/ЕГЭ"],
+                category: ["math"],
+                color: "from-cyan-400 to-blue-500",
+                initials: "ОТ",
+                image: "telegram-cloud-photo-size-2-5460960345053665966-y.jpg"
+            },
+            {
+                name: "Алексей Нестеров",
+                role: "Преподаватель по математике",
+                bio: "Выпускник 179 школы, 95 баллов за ЕГЭ, призёр ММО и Турнира городов. Превосходно структурирует подготовку к ОГЭ и ЕГЭ по математике.",
+                tags: ["Выпускник 179", "Турнир Городов", "ОГЭ/ЕГЭ"],
+                category: ["math"],
+                color: "from-sky-400 to-indigo-500",
+                initials: "АН",
+                image: "telegram-cloud-photo-size-2-5460960345053665970-y.jpg"
+            },
+            {
+                name: "Анастасия Растегаева",
+                role: "Преподаватель по математике",
+                bio: "95 баллов за математику и 94 за английский на ЕГЭ-2025, студентка ВШЭ в Австрии. Помогает ученикам со всеми тонкостями школьной математики, ОГЭ и профильного ЕГЭ.",
+                tags: ["ВШЭ Австрия", "Математика", "ЕГЭ/ОГЭ"],
+                category: ["math"],
+                color: "from-violet-400 to-purple-500",
+                initials: "АР",
+                image: "telegram-cloud-photo-size-2-5460960345053666157-x.jpg"
+            },
+            {
+                name: "Игорь Зеленский",
+                role: "Преподаватель по математике",
+                bio: "Дважды призёр Турнира городов, 95 баллов за ЕГЭ, студент престижного факультета ПМИ ВШЭ. Досконально объясняет все тонкости школьной программы и ОГЭ/ЕГЭ.",
+                tags: ["ВШЭ ПМИ", "Турнир Городов", "ОГЭ/ЕГЭ"],
+                category: ["math"],
+                color: "from-amber-400 to-orange-500",
+                initials: "ИЗ",
+                image: "telegram-cloud-photo-size-2-5460960345053666102-x.jpg"
+            },
+            {
+                name: "Илья Лисицын",
+                role: "Преподаватель по математике и информатике",
+                bio: "Студент ФКН ВШЭ, выпускник 179 школы, призёр Турнира городов и Математического праздника. Успешно поднял уровень ученика с полного нуля до 85 баллов на ЕГЭ за полгода.",
+                tags: ["ВШЭ ФКН", "Информатика", "Математика"],
+                category: ["math", "it"],
+                color: "from-orange-400 to-amber-500",
+                initials: "ИЛ",
+                image: "telegram-cloud-photo-size-2-5460955225452647134-y.jpg"
+            },
+            {
+                name: "Георгий Евстигнеев",
+                role: "Преподаватель по математике",
+                bio: "7-кратный призёр этапов ВсОШ по математике, информатике и экономике, студент ФПМИ МФТИ, преподаватель официальной сборной Московской области.",
+                tags: ["МФТИ ФПМИ", "7-кратный Призёр", "Тренер сборной"],
+                category: ["math"],
+                color: "from-teal-400 to-emerald-500",
+                initials: "ГЕ",
+                image: "telegram-cloud-photo-size-2-5460960345053666315-y.jpg"
+            },
+            {
+                name: "Егор Лопатин",
+                role: "Преподаватель по математике",
+                bio: "Победитель ВсОШ, кандидат в национальную сборную России, призёр международных студенческих олимпиад, студент ФПМИ МФТИ. Глубокая подготовка к ВсОШ.",
+                tags: ["Победитель ВсОШ", "Кандидат в сборную РФ", "МФТИ"],
+                category: ["math"],
+                color: "from-indigo-400 to-blue-500",
+                initials: "ЕЛ",
+                image: "telegram-cloud-photo-size-2-5460960345053666333-y.jpg"
+            },
+            {
+                name: "Анна Ящук",
+                role: "Преподаватель по математике",
+                bio: "Призёр заключительного этапа ВсОШ в 10 и 11 классах, победитель «Высшей Пробы», студентка МатФака ВШЭ. Составляет олимпиады и судит матбои. Ведёт исключительно олимпиадную математику.",
+                tags: ["Призёр ВсОШ Финал", "ВШЭ МатФак", "Судья Матбоев"],
+                category: ["math"],
+                color: "from-fuchsia-400 to-pink-500",
+                initials: "АЯ",
+                image: "telegram-cloud-photo-size-2-5460960345053666321-y.jpg"
+            },
+            {
+                name: "Михаил Далингер",
+                role: "Преподаватель олимпиадной математики",
+                bio: "100 баллов за ЕГЭ, серебряный призёр Жаутыковской олимпиады, победитель Турнира городов и «Высшей Пробы», дважды участник финала ВсОШ. Готовит к ЕГЭ и олимпиадной математике.",
+                tags: ["100 Баллов ЕГЭ", "Жаутыковская", "Финалист ВсОШ"],
+                category: ["math"],
+                color: "from-rose-400 to-red-500",
+                initials: "МД",
+                image: "telegram-cloud-photo-size-2-5462976205133911033-y.jpg"
+            },
+            {
+                name: "Тимофей Котов",
+                role: "Преподаватель по математике",
+                bio: "Трижды призёр ВсОШ, серебряный медалист Китайской национальной олимпиады по математике, студент МФТИ. Ведёт олимпиадную математику.",
+                tags: ["Китайская Олимпиада", "Трижды Призёр ВсОШ", "МФТИ"],
+                category: ["math"],
+                color: "from-green-400 to-teal-500",
+                initials: "ТК",
+                image: "telegram-cloud-photo-size-2-5460960345053666339-y.jpg"
+            },
+            {
+                name: "Леонид Любаев",
+                role: "Преподаватель физики",
+                bio: "Студент НИЯУ МИФИ. Поступил по олимпиаде «Инженерная» (первый уровень) — БВИ, без конкурса аттестатов. Участник заключительного этапа «Физтеха», ежегодный участник регионального этапа ВсОШ по физике. Имеет около двух лет репетиторства.",
+                tags: ["НИЯУ МИФИ", "БВИ", "Олимпиадная Физика", "Региональный ВсОШ"],
+                category: ["physics"],
+                color: "from-cyan-400 to-teal-500",
+                initials: "ЛЛ",
+                image: "telegram-cloud-photo-size-2-5462976205133911469-y.jpg"
+            }
+        ];
+
         // Global UI states
         const state = {
             activeSubject: 'math',
-            calcLevel: 'school',
-            calcLessons: 4,
             quizStep: 0,
             quizAnswers: {},
             selectedClassType: 'individual'
         };
 
-        // 1. SUBJECTS SELECTION TABS
+        // Умная замена битых путей изображений на потрясающие градиенты в реальном времени!
+        function handleImageError(imgElement, initials, colorClasses) {
+            const parent = imgElement.parentElement;
+            if (!parent) return;
+            
+            const fallbackDiv = document.createElement('div');
+            // Если в превью нет файлов, динамически рендерим стильный кружок с градиентом вместо битой иконки
+            fallbackDiv.className = `w-14 h-14 rounded-2xl bg-gradient-to-br ${colorClasses || 'from-blue-400 to-indigo-500'} text-white font-display font-bold text-lg flex items-center justify-center shadow-inner flex-shrink-0`;
+            fallbackDiv.innerText = initials;
+            
+            parent.replaceChild(fallbackDiv, imgElement);
+        }
+
+        function filterTeam(category) {
+            // Update button styles
+            document.querySelectorAll('.team-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-brandBlue', 'text-white', 'shadow-sm');
+                btn.classList.add('bg-white', 'border', 'border-slate-200', 'text-brandMuted', 'hover:border-slate-300');
+            });
+            event.target.classList.remove('bg-white', 'border', 'border-slate-200', 'text-brandMuted');
+            event.target.classList.add('bg-brandBlue', 'text-white', 'shadow-sm');
+
+            renderTeamGrid(category);
+        }
+
+        function renderTeamGrid(filter = 'all') {
+            const grid = document.getElementById('teachers-grid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? teachers 
+                : teachers.filter(t => t.category.includes(filter));
+
+            filtered.forEach(t => {
+                let tagsHtml = '';
+                t.tags.forEach(tag => {
+                    tagsHtml += `<span class="bg-slate-100 text-brandText text-[10px] font-bold px-2 py-1 rounded-md">${tag}</span>`;
+                });
+
+                // HTML для аватара: пытается загрузить реальный файл, при неудаче (в предпросмотре) вызывает handleImageError
+                const avatarHtml = t.image 
+                    ? `<img src="${t.image}" alt="${t.name}" class="w-14 h-14 rounded-2xl object-cover shadow-sm border border-slate-200 flex-shrink-0" onerror="handleImageError(this, '${t.initials}', '${t.color}')">`
+                    : `<div class="w-14 h-14 rounded-2xl bg-gradient-to-br ${t.color} text-white font-display font-bold text-lg flex items-center justify-center shadow-inner flex-shrink-0">${t.initials}</div>`;
+
+                grid.innerHTML += `
+                    <div class="bg-white border border-slate-100 p-6 rounded-3xl premium-hover flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <!-- Avatar and Info Header -->
+                            <div class="flex items-center space-x-4">
+                                ${avatarHtml}
+                                <div>
+                                    <h3 class="font-display text-base font-bold text-brandText">${t.name}</h3>
+                                    <p class="text-xs text-brandBlue font-semibold">${t.role}</p>
+                                </div>
+                            </div>
+                            
+                            <p class="text-brandMuted text-xs leading-relaxed">
+                                ${t.bio}
+                            </p>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-1.5 pt-4 mt-4 border-t border-slate-100">
+                            ${tagsHtml}
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
         function selectSubject(subjectId) {
             state.activeSubject = subjectId;
             
             // Toggle tab active styles
             document.querySelectorAll('.subject-tab').forEach(tab => {
-                tab.classList.remove('bg-gradient-to-r', 'from-brandBlue', 'to-blue-900/40', 'border-brandBlue', 'text-white');
-                tab.classList.add('bg-darkCard/50', 'border-gray-800', 'text-gray-400', 'hover:border-gray-700');
+                tab.classList.remove('bg-gradient-to-r', 'from-blue-50', 'to-blue-100/50', 'border-blue-200', 'text-brandBlue');
+                tab.classList.add('bg-white', 'border-slate-100', 'text-brandMuted', 'hover:border-slate-200');
             });
             
             const activeTab = document.getElementById(`tab-${subjectId}`);
             if (activeTab) {
-                activeTab.classList.remove('bg-darkCard/50', 'border-gray-800', 'text-gray-400', 'hover:border-gray-700');
-                activeTab.classList.add('bg-gradient-to-r', 'from-brandBlue', 'to-blue-900/40', 'border-brandBlue', 'text-white');
+                activeTab.classList.remove('bg-white', 'border-slate-100', 'text-brandMuted', 'hover:border-slate-200');
+                activeTab.classList.add('bg-gradient-to-r', 'from-blue-50', 'to-blue-100/50', 'border-blue-200', 'text-brandBlue');
             }
 
             // Show proper content panel
@@ -877,117 +981,34 @@
             }
         }
 
-        // 2. TEACHERS SHUFFLING AND FILTERS
-        function filterTeachers(subjectFilter) {
-            // Update filter button states
-            document.querySelectorAll('.teacher-filter-btn').forEach(btn => {
-                btn.classList.remove('bg-brandBlue', 'text-white');
-                btn.classList.add('bg-darkCard', 'hover:bg-slate-900', 'border', 'border-gray-800', 'text-gray-400');
-            });
-
-            const activeBtn = document.getElementById(`teacher-btn-${subjectFilter}`);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-darkCard', 'hover:bg-slate-900', 'border', 'border-gray-800', 'text-gray-400');
-                activeBtn.classList.add('bg-brandBlue', 'text-white');
-            }
-
-            // Hide or show teacher cards
-            document.querySelectorAll('.teacher-card').forEach(card => {
-                const cardSub = card.getAttribute('data-subject');
-                if (subjectFilter === 'all' || cardSub === subjectFilter) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // 3. COURSE LEVEL AND LESSON CALCULATOR
-        const basePrices = {
-            school: 1800,
-            lyceum: 2200,
-            ege: 2500,
-            olympiad: 3200
-        };
-
-        function setCalcLevel(level) {
-            state.calcLevel = level;
-            
-            // Toggle level buttons style
-            document.querySelectorAll('.level-btn').forEach(btn => {
-                btn.classList.remove('bg-brandBlue', 'border-brandBlue', 'text-white');
-                btn.classList.add('bg-slate-950', 'border-gray-800', 'text-gray-400', 'hover:border-gray-700');
-            });
-
-            const activeBtn = document.getElementById(`lvl-${level}`);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-slate-950', 'border-gray-800', 'text-gray-400', 'hover:border-gray-700');
-                activeBtn.classList.add('bg-brandBlue', 'border-brandBlue', 'text-white');
-            }
-
-            recalculatePrice();
-        }
-
-        function setCalcLessons(num) {
-            state.calcLessons = parseInt(num);
-            
-            // Helper for proper Russian plurals
-            const count = state.calcLessons;
-            let noun = 'уроков';
-            if (count % 10 === 1 && count !== 11) {
-                noun = 'урок';
-            } else if (count % 10 >= 2 && count % 10 <= 4 && (count < 10 || count > 20)) {
-                noun = 'урока';
-            }
-            
-            document.getElementById('lesson-counter-label').textContent = `${count} ${noun}`;
-            recalculatePrice();
-        }
-
-        function recalculatePrice() {
-            const pricePerLesson = basePrices[state.calcLevel] || 2000;
-            let total = pricePerLesson * state.calcLessons;
-            
-            // Volume Discounts
-            if (state.calcLessons >= 8 && state.calcLessons < 12) {
-                total *= 0.95; // 5% discount
-            } else if (state.calcLessons >= 12) {
-                total *= 0.90; // 10% discount
-            }
-
-            const formattedPrice = Math.round(total).toLocaleString('ru-RU');
-            document.getElementById('total-price-display').textContent = formattedPrice;
-        }
-
-        // 4. MULTI-STEP QUIZ STATE MACHINE
         const quizQuestions = [
             {
-                q: "Какова ваша текущая цель в обучении?",
-                key: "track",
+                q: "Какая у вас сейчас главная учебная цель?",
+                key: "goal",
                 options: [
-                    { text: "Подтянуть школьные оценки, разобраться с домашней работой", value: "school" },
-                    { text: "Поступить в сильный лицей (СУНЦ, ВШЭ, 1580 и др.)", value: "lyceum" },
-                    { text: "Сдать ОГЭ / ЕГЭ по точным наукам на максимальный балл", value: "exams" },
-                    { text: "Взять диплом олимпиады (Всерос, Ломоносов, Высшая проба)", value: "olympiad" }
+                    { text: "Взять диплом олимпиады (Всерос или перечень)", value: "olympiad" },
+                    { text: "Поступить в сильный лицей (СУНЦ, 179 школа, ВШЭ)", value: "lyceum" },
+                    { text: "Сдать ОГЭ / ЕГЭ на максимальный балл", value: "exams" },
+                    { text: "Подтянуть школьные оценки и домашку", value: "school" }
                 ]
             },
             {
-                q: "Какая дисциплина сейчас в приоритете?",
+                q: "По какому предмету требуется подготовка?",
                 key: "subject",
                 options: [
-                    { text: "Математика (алгебра, геометрия, спецмат)", value: "math" },
-                    { text: "Информатика и программирование", value: "it" },
-                    { text: "Физика (теория и олимпиадные задачи)", value: "physics" },
-                    { text: "Экономика и количественные методы", value: "economics" }
+                    { text: "Математика (ОГЭ/ЕГЭ или спецмат)", value: "math" },
+                    { text: "Информатика (алгоритмы, программирование)", value: "it" },
+                    { text: "Физика (законы природы и расчетные задачи)", value: "physics" },
+                    { text: "Экономика (количественные методы и олимпиады)", value: "economics" },
+                    { text: "Английский язык (разговорный и экзамены)", value: "english" }
                 ]
             },
             {
-                q: "Какой формат занятий для вас наиболее комфортен?",
+                q: "Какой формат занятий вы рассматриваете?",
                 key: "format",
                 options: [
-                    { text: "Индивидуальные уроки один на один с наставником", value: "individual" },
-                    { text: "Небольшие мини-группы (до 4-5 человек)", value: "group" },
-                    { text: "Интенсивные курсы и разборы в записи с поддержкой куратора", value: "course" }
+                    { text: "Индивидуально с наставником один на один (2 500 ₽)", value: "individual" },
+                    { text: "В мини-группе (лист ожидания, 500 - 800 ₽)", value: "group" }
                 ]
             }
         ];
@@ -1003,27 +1024,27 @@
                     optionsHtml += `
                         <button
                             onclick="handleQuizAnswer('${currentQuestion.key}', '${opt.value}', '${opt.text.replace(/'/g, "\\'")}')"
-                            class="text-left p-4 rounded-xl border border-gray-800 bg-slate-950/40 hover:bg-brandBlue/10 hover:border-brandBlue/60 transition group flex items-center justify-between"
+                            class="text-left p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-blue-50 hover:border-brandBlue/50 transition group flex items-center justify-between"
                         >
-                            <span class="text-gray-300 group-hover:text-white">${opt.text}</span>
-                            <i class="fa-solid fa-circle text-[6px] text-gray-700 group-hover:text-brandBlue transition"></i>
+                            <span class="text-brandText text-sm sm:text-base group-hover:text-brandBlue transition font-medium">${opt.text}</span>
+                            <i class="fa-solid fa-chevron-right text-xs text-slate-300 group-hover:text-brandBlue transition"></i>
                         </button>
                     `;
                 });
 
                 container.innerHTML = `
                     <div class="space-y-6">
-                        <div class="flex justify-between text-xs text-gray-500">
+                        <div class="flex justify-between items-center text-xs font-bold text-slate-400">
                             <span>Вопрос ${state.quizStep + 1} из ${quizQuestions.length}</span>
-                            <span>Выполнено ${progressPercent}%</span>
+                            <span>Готово ${progressPercent}%</span>
                         </div>
                         
                         <!-- Progress Bar -->
-                        <div class="w-full h-1 bg-slate-950 rounded-full overflow-hidden">
+                        <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
                             <div class="h-full bg-brandBlue transition-all duration-300" style="width: ${((state.quizStep + 1) / quizQuestions.length) * 100}%"></div>
                         </div>
 
-                        <h3 class="text-xl sm:text-2xl font-bold">${currentQuestion.q}</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-brandText">${currentQuestion.q}</h3>
 
                         <div class="grid gap-3 pt-2">
                             ${optionsHtml}
@@ -1032,56 +1053,56 @@
                 `;
             } else {
                 // Render Quiz Results
-                const track = state.quizAnswers['track'];
+                const goal = state.quizAnswers['goal'];
                 const subject = state.quizAnswers['subject'];
                 const format = state.quizAnswers['format'];
 
-                let profileTitle = "Интеллектуальный старт";
-                let profileDesc = "Повышение школьной успеваемости, глубокий разбор домашних заданий, плавный выход в уверенные отличники. Рекомендовано: от 4 до 8 уроков в месяц.";
+                let profileTitle = "Индивидуальный школьный трек";
+                let profileDesc = "Фокус на глубоком понимании школьной программы. Мы научим выводить формулы самостоятельно и не бояться контрольных. Рекомендуется индивидуальный формат.";
                 
-                if (track === 'lyceum') {
-                    profileTitle = "Лицеист";
-                    profileDesc = "Системное усложнение программы под требования топ-школ. Разбор задач прошлых лет, логика и математический фундамент. Рекомендовано: 8–10 уроков в месяц.";
-                } else if (track === 'exams') {
-                    profileTitle = "Абитуриент 90+";
-                    profileDesc = "Строгий разбор прототипов ОГЭ / ЕГЭ, отработка критериев оформления заданий развернутой части, упор на скорость. Рекомендовано: 8 уроков в месяц.";
-                } else if (track === 'olympiad') {
-                    profileTitle = "Олимпиадная элита";
-                    profileDesc = "Выход за пределы школьных стандартов. Теория чисел, сложные геометрические конструкции, олимпиадный кодинг. Рекомендовано: от 8 до 12 уроков в месяц.";
+                if (goal === 'olympiad') {
+                    profileTitle = "Олимпиадный чемпион";
+                    profileDesc = "Внеклассная математика, разбор методов олимпиад из перечня РСОШ, подготовка к этапам ВсОШ. Выход за рамки стандартов под руководством олимпиадников.";
+                } else if (goal === 'lyceum') {
+                    profileTitle = "Будущий лицеист";
+                    profileDesc = "Интенсивная проработка билетов вступительных испытаний в ведущие лицеи страны. Опережающий темп обучения.";
+                } else if (goal === 'exams') {
+                    profileTitle = "Абитуриент 95+";
+                    profileDesc = "Набивание руки на скорость выполнения заданий повышенной сложности ОГЭ/ЕГЭ, идеальное оформление второй части и уход от глупых вычислительных ошибок.";
                 }
 
                 let friendlySubject = "Математика";
                 if (subject === 'it') friendlySubject = "Информатика";
                 else if (subject === 'physics') friendlySubject = "Физика";
                 else if (subject === 'economics') friendlySubject = "Экономика";
+                else if (subject === 'english') friendlySubject = "Английский язык";
 
                 let friendlyFormat = "Индивидуально";
                 if (format === 'group') friendlyFormat = "В мини-группе";
-                else if (format === 'course') friendlyFormat = "В записи с куратором";
 
                 container.innerHTML = `
                     <div class="text-center space-y-6">
-                        <div class="w-16 h-16 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-3xl mx-auto">
+                        <div class="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center text-3xl mx-auto">
                             <i class="fa-solid fa-check"></i>
                         </div>
                         
-                        <h3 class="font-display text-2xl font-bold">Оптимальный трек подобран!</h3>
+                        <h3 class="font-display text-xl sm:text-2xl font-bold text-brandText">Программа подобрана!</h3>
                         
-                        <div class="max-w-md mx-auto bg-slate-950/80 border border-gray-800 p-6 rounded-2xl text-left space-y-4">
-                            <div class="text-sm font-bold text-brandCyan uppercase tracking-widest">Ваш рекомендованный профиль:</div>
+                        <div class="max-w-md mx-auto bg-slate-50 border border-slate-200 p-6 rounded-2xl text-left space-y-4">
+                            <div class="text-xs font-bold text-brandBlue uppercase tracking-widest">Ваш персональный профиль:</div>
                             
-                            <p class="text-gray-300 text-sm">
-                                <strong>Профиль «${profileTitle}»:</strong> ${profileDesc}
+                            <p class="text-brandText text-sm leading-relaxed">
+                                <strong>Направление «${profileTitle}»:</strong> ${profileDesc}
                             </p>
 
-                            <div class="text-xs text-gray-500 pt-3 border-t border-gray-800">
-                                Формат: ${friendlyFormat}, по предмету: ${friendlySubject}
+                            <div class="text-xs text-brandMuted pt-3 border-t border-slate-200">
+                                Дисциплина: <strong>${friendlySubject}</strong> | Формат: <strong>${friendlyFormat}</strong>
                             </div>
                         </div>
 
-                        <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 justify-center pt-4">
-                            <button onclick="resetQuiz()" class="text-xs text-gray-500 hover:text-white transition">Пройти заново</button>
-                            <button onclick="toggleModal(true)" class="bg-brandBlue hover:bg-blue-600 text-white font-semibold px-6 py-2.5 rounded-xl transition text-sm">
+                        <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 justify-center items-center pt-4">
+                            <button onclick="resetQuiz()" class="text-xs font-semibold text-brandMuted hover:text-brandText transition">Пройти заново</button>
+                            <button onclick="openModalWithQuizAnswers('${profileTitle}', '${friendlySubject}', '${format}')" class="bg-brandBlue hover:bg-brandDarkBlue text-white font-semibold px-6 py-2.5 rounded-xl transition text-sm">
                                 Записаться с этим профилем
                             </button>
                         </div>
@@ -1102,7 +1123,6 @@
             renderQuiz();
         }
 
-        // 5. MODAL FORM MANAGEMENT
         function toggleModal(isOpen) {
             const modal = document.getElementById('lead-modal');
             const form = document.getElementById('lead-form');
@@ -1123,12 +1143,33 @@
             const btnGroup = document.getElementById('class-type-group');
 
             if (type === 'individual') {
-                btnIndiv.className = "p-3 rounded-xl border bg-brandBlue/20 border-brandBlue text-white";
-                btnGroup.className = "p-3 rounded-xl border bg-slate-950 border-gray-800 text-gray-400";
+                btnIndiv.className = "p-3 rounded-xl border bg-blue-50 border-brandBlue text-brandBlue font-bold transition w-full text-center";
+                btnGroup.className = "p-3 rounded-xl border bg-slate-50 border-slate-200 text-brandMuted transition w-full text-center";
             } else {
-                btnGroup.className = "p-3 rounded-xl border bg-brandBlue/20 border-brandBlue text-white";
-                btnIndiv.className = "p-3 rounded-xl border bg-slate-950 border-gray-800 text-gray-400";
+                btnGroup.className = "p-3 rounded-xl border bg-blue-50 border-brandBlue text-brandBlue font-bold transition w-full text-center";
+                btnIndiv.className = "p-3 rounded-xl border bg-slate-50 border-slate-200 text-brandMuted transition w-full text-center";
             }
+        }
+
+        function openModalWithQuizAnswers(profile, subject, format) {
+            toggleModal(true);
+            
+            const selectElem = document.getElementById('form-subject');
+            if (selectElem) {
+                if (subject.toLowerCase().includes('мат')) {
+                    selectElem.value = profile.includes('олимп') ? 'Математика (Олимпиады / ВсОШ)' : 'Математика (ОГЭ / ЕГЭ / Школа)';
+                } else if (subject.toLowerCase().includes('инф')) {
+                    selectElem.value = 'Информатика (ЕГЭ / ОГЭ)';
+                } else if (subject.toLowerCase().includes('физ')) {
+                    selectElem.value = 'Физика (Олимпиады / Школа)';
+                } else if (subject.toLowerCase().includes('экон')) {
+                    selectElem.value = 'Экономика (Олимпиады)';
+                } else if (subject.toLowerCase().includes('англ')) {
+                    selectElem.value = 'Английский язык (ОГЭ / ЕГЭ / Разговорный)';
+                }
+            }
+            
+            setClassType(format);
         }
 
         function handleFormSubmit(e) {
@@ -1140,16 +1181,15 @@
             form.classList.add('hidden');
             success.classList.remove('hidden');
 
-            // Automatically close the modal after 3 seconds
             setTimeout(() => {
                 toggleModal(false);
             }, 3000);
         }
 
-        // Start initialization on window load
+        // Global Initialization
         window.onload = function() {
+            renderTeamGrid('all');
             renderQuiz();
-            recalculatePrice();
         }
     </script>
 </body>

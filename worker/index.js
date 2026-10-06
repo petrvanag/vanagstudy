@@ -72,6 +72,15 @@ export default {
       body: JSON.stringify({ chat_id: env.CHAT_ID, text, disable_web_page_preview: true }),
     });
 
+    // Для диагностики в `wrangler tail`: какой бот отправил и в какой чат (без токена и без текста заявки).
+    const result = await tg.json().catch(() => ({}));
+    console.log(JSON.stringify({
+      ok: result.ok === true,
+      bot: result.result?.from?.username,
+      chat: result.result?.chat?.username || result.result?.chat?.title || result.result?.chat?.id,
+      error: result.description,
+    }));
+
     if (!tg.ok) return json({ ok: false, error: "telegram" }, 502, cors);
     return json({ ok: true }, 200, cors);
   },

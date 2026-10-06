@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T22:36:33+00:00",
+  "title": "Design System: VANAGSTUDY",
+  "extensions": {
+    "colorMeta": {
+      "red": {
+        "role": "primary",
+        "displayName": "Teacher's Pen Red",
+        "canonical": "oklch(52.8% 0.188 30.1)",
+        "tonalRamp": [
+          "#1f0000",
+          "#4a0301",
+          "#7b0902",
+          "#af1204",
+          "#da4533",
+          "#fd7561",
+          "#feb6a9",
+          "#fee9e5"
+        ]
+      },
+      "red-deep": {
+        "role": "primary",
+        "displayName": "Pressed Red",
+        "canonical": "oklch(45.6% 0.164 30.0)",
+        "tonalRamp": [
+          "#1f0000",
+          "#4a0200",
+          "#7c0500",
+          "#a6281c",
+          "#d05140",
+          "#fa7764",
+          "#fdb6aa",
+          "#ffe9e5"
+        ]
+      },
+      "red-wash": {
+        "role": "primary",
+        "displayName": "Red Wash",
+        "canonical": "oklch(92.5% 0.024 33.5)",
+        "tonalRamp": [
+          "#140705",
+          "#2f201c",
+          "#4c3b37",
+          "#6b5955",
+          "#8e7b77",
+          "#b3a09b",
+          "#dac5c0",
+          "#fee9e4"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Printing Ink",
+        "canonical": "oklch(20.5% 0.008 274.5)",
+        "tonalRamp": [
+          "#0a0b0f",
+          "#232428",
+          "#3e3f44",
+          "#5c5d62",
+          "#7f8085",
+          "#a3a4aa",
+          "#c9cad0",
+          "#edeef4"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "oklch(39.5% 0.016 271.0)",
+        "tonalRamp": [
+          "#090b12",
+          "#21242c",
+          "#3c3f48",
+          "#5a5d67",
+          "#7d808a",
+          "#a1a4af",
+          "#c6cad5",
+          "#eaeef9"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Pencil Grey",
+        "canonical": "oklch(50.7% 0.015 271.1)",
+        "tonalRamp": [
+          "#090b11",
+          "#21242b",
+          "#3d3f48",
+          "#5a5d66",
+          "#7d8089",
+          "#a1a4ae",
+          "#c7cad4",
+          "#ebeef9"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Desk Paper",
+        "canonical": "oklch(98.5% 0.005 95.1)",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252421",
+          "#40403d",
+          "#5e5e5a",
+          "#81807d",
+          "#a5a5a1",
+          "#cbcac7",
+          "#efeeea"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Shaded Paper",
+        "canonical": "oklch(95.4% 0.011 95.2)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#26241e",
+          "#414039",
+          "#5f5e57",
+          "#828079",
+          "#a6a59d",
+          "#cccbc3",
+          "#f1efe7"
+        ]
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Clean Sheet",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(87.3% 0.017 91.6)",
+        "tonalRamp": [
+          "#0e0b04",
+          "#27241b",
+          "#434036",
+          "#615d53",
+          "#848075",
+          "#a8a499",
+          "#cecabe",
+          "#f2eee2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 only (and the /prep page hero at a slightly smaller clamp)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section H2s in the 5:7 section head; subject names as printed labels."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "H3s: numbered conditions, stories, prices, sub-blocks, teacher names."
+      },
+      "problem": {
+        "displayName": "Problem",
+        "purpose": "Serif reading text that belongs to the sheet: problem statements, student stories, quiz answer rows; italic for principle and founder quote."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Prices and grant sums in lining figures."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running Golos text, 30-42em measure."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels, roles, nav links, meta lines; sentence case, no tracking."
+      },
+      "pen": {
+        "displayName": "Pen",
+        "purpose": "Red marginal annotations only, rotated -2 to -4deg."
+      }
+    },
+    "shadows": [
+      {
+        "name": "laid-sheet",
+        "value": "0 1px 2px rgba(22, 23, 27, .06), 0 24px 48px -28px rgba(22, 23, 27, .45)",
+        "purpose": "Hero problem card only, combined with rotate(-0.8deg)."
+      },
+      {
+        "name": "dropdown-sheet",
+        "value": "0 18px 40px -16px rgba(22, 23, 27, .35), 0 2px 6px rgba(22, 23, 27, .08)",
+        "purpose": "Mobile menu panel."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Every transition and the hero entrance."
+      },
+      {
+        "name": "state",
+        "value": "0.2s-0.35s",
+        "purpose": "Hover colour, underline and border changes; FAQ plus rotates 45deg in 0.35s."
+      },
+      {
+        "name": "photo-reveal",
+        "value": "filter 0.6s, transform 0.9s",
+        "purpose": "Greyscale portrait returns to colour and scales to 1.025 on hover/focus-within."
+      },
+      {
+        "name": "hero-entrance",
+        "value": "layers 0.7s from scale(.86), delay 450ms + i*140ms; equation and pen note fade 0.8s at 1.25s; tick draws 0.9s at 1.5s",
+        "purpose": "The single orchestrated motion; only under prefers-reduced-motion: no-preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "nav-collapse",
+        "value": "1080px"
+      },
+      {
+        "name": "hero-stack",
+        "value": "900px"
+      },
+      {
+        "name": "apply-stack",
+        "value": "860px"
+      },
+      {
+        "name": "head-stack",
+        "value": "800px"
+      },
+      {
+        "name": "rows-stack",
+        "value": "760px"
+      },
+      {
+        "name": "compact-header",
+        "value": "640px"
+      },
+      {
+        "name": "team-single",
+        "value": "440px"
+      },
+      {
+        "name": "choice-single",
+        "value": "420px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink slab that turns pen red on hover; the single primary action.",
+      "html": "<button class=\"ds-btn\">Записаться на диагностику <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:14px 24px;border:1px solid var(--ink);border-radius:3px;background:var(--ink);color:var(--paper);font:600 16px/1.2 var(--sans);cursor:pointer;transition:background-color .25s cubic-bezier(.16,1,.3,1),border-color .25s cubic-bezier(.16,1,.3,1),color .25s cubic-bezier(.16,1,.3,1)}.ds-btn:hover{background:var(--red);border-color:var(--red);color:#fff}.ds-btn:active{background:var(--red-deep);border-color:var(--red-deep)}.ds-btn:focus-visible{outline:2px solid var(--red);outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action: ink outline, red outline and text on hover, never filled.",
+      "html": "<button class=\"ds-btn-ghost\">Записаться в лист ожидания</button>",
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;min-height:52px;padding:14px 24px;border:1px solid var(--ink);border-radius:3px;background:transparent;color:var(--ink);font:600 16px/1.2 var(--sans);cursor:pointer;transition:border-color .25s cubic-bezier(.16,1,.3,1),color .25s cubic-bezier(.16,1,.3,1)}.ds-btn-ghost:hover{color:var(--red);border-color:var(--red)}.ds-btn-ghost:focus-visible{outline:2px solid var(--red);outline-offset:3px}"
+    },
+    {
+      "name": "Answer Field",
+      "kind": "input",
+      "refersTo": "answer-field",
+      "description": "Input drawn as an answer line: ink underline, red caret, 2px red underline on focus, red error text.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-f\">Имя ученика или родителя</label><input id=\"ds-f\" placeholder=\"Например, Анна, мама Миши\"><p class=\"ds-field-err\">Напишите, как к вам обращаться.</p></div>",
+      "css": ".ds-field label{display:block;margin-bottom:6px;font:600 14px var(--sans);color:var(--ink-2)}.ds-field input{width:100%;min-height:48px;padding:10px 2px;border:0;border-bottom:1px solid var(--ink);border-radius:0;background:transparent;font:400 17px var(--sans);color:var(--ink);caret-color:var(--red)}.ds-field input::placeholder{color:var(--ink-3)}.ds-field input:focus{outline:none;border-bottom:2px solid var(--red)}.ds-field-err{margin:6px 0 0;font:400 14px var(--sans);color:var(--red)}"
+    },
+    {
+      "name": "Format Choice",
+      "kind": "chip",
+      "refersTo": "format-choice",
+      "description": "Paired radio options; hairline at rest, ink border plus inset ink ring when selected.",
+      "html": "<div class=\"ds-choice\"><label><input type=\"radio\" name=\"ds-fmt\" checked>Индивидуально<small>2 500 ₽ за час</small></label><label><input type=\"radio\" name=\"ds-fmt\">Мини-группа<small>Лист ожидания</small></label></div>",
+      "css": ".ds-choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ds-choice label{position:relative;display:flex;flex-direction:column;gap:2px;padding:12px 14px;border:1px solid var(--rule);border-radius:3px;cursor:pointer;font:600 16px var(--sans);color:var(--ink)}.ds-choice small{font-weight:400;font-size:14px;color:var(--ink-3)}.ds-choice input{position:absolute;opacity:0;pointer-events:none}.ds-choice label:has(input:checked){border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}.ds-choice label:hover{border-color:var(--ink-3)}.ds-choice label:has(input:focus-visible){outline:2px solid var(--red);outline-offset:2px}"
+    },
+    {
+      "name": "Masthead Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Serif wordmark with red STUDY, Golos links in soft ink that gain a red underline on hover.",
+      "html": "<header class=\"ds-mast\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-brand-name\">VANAG<b>STUDY</b></span><span class=\"ds-brand-sub\">Школа точных наук</span></a><nav><a href=\"#\">Команда</a><a href=\"#\">Направления</a><a href=\"#\">Стоимость</a></nav></header>",
+      "css": ".ds-mast{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:68px;padding:0 16px;background:var(--paper);border-bottom:1px solid var(--rule)}.ds-brand{display:flex;align-items:baseline;gap:12px;text-decoration:none;color:var(--ink)}.ds-brand-name{font:700 21px/1 var(--serif);letter-spacing:.02em}.ds-brand-name b{color:var(--red)}.ds-brand-sub{font:400 13px var(--sans);color:var(--ink-3)}.ds-mast nav{display:flex;gap:22px}.ds-mast nav a{padding:6px 0;font:500 15px var(--sans);color:var(--ink-2);text-decoration:underline;text-decoration-color:transparent;text-underline-offset:.35em;transition:text-decoration-color .25s,color .2s}.ds-mast nav a:hover{color:var(--ink);text-decoration-color:var(--red)}.ds-mast a:focus-visible{outline:2px solid var(--red);outline-offset:3px}"
+    },
+    {
+      "name": "Problem Card",
+      "kind": "card",
+      "refersTo": "problem-card",
+      "description": "Signature: a rotated white sheet with a ruled header, serif problem, answer in red and a pen note.",
+      "html": "<figure class=\"ds-problem\"><div class=\"ds-problem-head\"><b>Задача для знакомства</b><span>математика</span></div><p class=\"ds-problem-text\"><b>Докажите,</b> что сумма первых <i>n</i> нечётных чисел равна <i>n</i>²</p><p class=\"ds-problem-eq\">1 + 3 + 5 + 7 + 9 = <span>5²</span></p><p class=\"ds-pen\">Формулу не надо заучивать — её видно</p></figure>",
+      "css": ".ds-problem{margin:0;max-width:420px;background:var(--sheet);padding:28px;transform:rotate(-.8deg);box-shadow:0 1px 2px rgba(22,23,27,.06),0 24px 48px -28px rgba(22,23,27,.45)}.ds-problem-head{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:12px;border-bottom:1px solid var(--ink);font:400 13px var(--sans);color:var(--ink-3)}.ds-problem-head b{color:var(--ink);font-size:14px}.ds-problem-text{margin:16px 0 0;font:400 18px/1.5 var(--serif);color:var(--ink)}.ds-problem-text b{font-family:var(--sans)}.ds-problem-eq{margin:14px 0 0;text-align:center;font:400 18px var(--serif)}.ds-problem-eq span{color:var(--red);font-weight:700}.ds-problem .ds-pen{margin:14px 0 0;text-align:right;transform:rotate(-2deg);font:400 1.45rem/1.15 var(--pen);color:var(--red)}"
+    },
+    {
+      "name": "Answer Box",
+      "kind": "card",
+      "refersTo": "answer-box",
+      "description": "Signature: the application as 'Задача 0', a white sheet in a 2px ink frame with a ruled title.",
+      "html": "<div class=\"ds-answer\"><p class=\"ds-answer-title\">Задача 0. Заявка на диагностику</p><p class=\"ds-answer-line\">Имя ученика или родителя</p></div>",
+      "css": ".ds-answer{max-width:520px;background:var(--sheet);color:var(--ink);border:2px solid var(--ink);padding:32px}.ds-answer-title{margin:0 0 26px;padding-bottom:12px;border-bottom:1px solid var(--ink);font:700 20px/1.2 var(--serif)}.ds-answer-line{margin:0;padding-bottom:28px;border-bottom:1px solid var(--ink);font:600 14px var(--sans);color:var(--ink-2)}"
+    },
+    {
+      "name": "Numbered Conditions",
+      "kind": "custom",
+      "refersTo": "title",
+      "description": "Signature: ordered points as olympiad conditions with hanging lining numerals on hairline rows.",
+      "html": "<ol class=\"ds-cond\"><li><h3>Школьная база без скуки<small>Понимание вместо зубрёжки</small></h3><p>Объясняем, откуда берутся формулы, и учим выводить правила самостоятельно.</p></li><li><h3>Поступление БВИ</h3><p>Дипломы перечневых олимпиад дают право поступить без экзаменов.</p></li></ol>",
+      "css": ".ds-cond{list-style:none;margin:0;padding:0;counter-reset:c}.ds-cond>li{counter-increment:c;display:grid;grid-template-columns:5fr 7fr;gap:12px 40px;padding-block:28px;border-top:1px solid var(--rule)}.ds-cond>li:last-child{border-bottom:1px solid var(--rule)}.ds-cond h3{margin:0;padding-left:1.6em;text-indent:-1.6em;font:700 1.5rem/1.08 var(--serif);letter-spacing:-.015em;color:var(--ink)}.ds-cond h3::before{content:counter(c) \".\";display:inline-block;width:1.6em;text-indent:0;font-variant-numeric:lining-nums tabular-nums}.ds-cond small{display:block;margin-top:8px;text-indent:0;font:500 14px var(--sans);color:var(--ink-3)}.ds-cond p{margin:0;font:400 17px/1.6 var(--sans);color:var(--ink-2)}"
+    },
+    {
+      "name": "Lettered Quiz Rows",
+      "kind": "custom",
+      "refersTo": "quiz-row",
+      "description": "Signature: answer options as serif rows led by а) б) в) г); letter and underline turn red on hover.",
+      "html": "<div class=\"ds-quiz\"><div class=\"ds-quiz-bar\"><i></i></div><button type=\"button\"><span class=\"ds-quiz-l\">а)</span><span>Взять диплом олимпиады</span></button><button type=\"button\"><span class=\"ds-quiz-l\">б)</span><span>Поступить в сильный лицей</span></button><button type=\"button\"><span class=\"ds-quiz-l\">в)</span><span>Сдать ОГЭ / ЕГЭ на максимальный балл</span></button></div>",
+      "css": ".ds-quiz{border-bottom:1px solid var(--rule)}.ds-quiz-bar{height:2px;margin-bottom:18px;background:var(--rule)}.ds-quiz-bar i{display:block;height:100%;width:33%;background:var(--red)}.ds-quiz button{appearance:none;display:grid;grid-template-columns:2.2em 1fr;align-items:baseline;width:100%;min-height:52px;padding:13px 0;border:0;border-top:1px solid var(--rule);background:none;font:400 17px/1.4 var(--serif);color:var(--ink);text-align:left;cursor:pointer}.ds-quiz-l{font-weight:700;transition:color .2s}.ds-quiz button:hover .ds-quiz-l{color:var(--red)}.ds-quiz button:hover span+span{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:.25em}.ds-quiz button:focus-visible{outline:2px solid var(--red);outline-offset:3px}"
+    },
+    {
+      "name": "Pen Note",
+      "kind": "custom",
+      "refersTo": "pen-note",
+      "description": "Teacher's red handwriting beside content; annotation only.",
+      "html": "<p class=\"ds-pen-note\">пока лист ожидания</p>",
+      "css": ".ds-pen-note{margin:0;display:inline-block;font:400 1.45rem/1.15 var(--pen);color:var(--red);transform:rotate(-2deg);transform-origin:0 50%}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Олимпиадный листок",
+    "overview": "Every page is one printed olympiad problem sheet lying on a desk: warm off-white paper, near-black ink, and a single red that belongs to the teacher checking the work. Sections are separated the way a printed sheet separates parts, with a double ink rule across the measure; content inside a section is set as numbered conditions, ruled lists and two-column \"statement / solution\" rows. Nothing is a floating card in a grid of cards; the page reads top to bottom like a document.\n\nThe system shows thinking instead of claiming it. The hero carries an actual problem with its picture-proof, a sum-of-odd-numbers square assembled from L-shaped layers, and the red pen annotates it in handwriting. Teacher photos are printed in grey like a lyceum yearbook and take their colour back when the reader points at them. The application form is \"Задача 0\", an answer box drawn with a heavy ink frame and underline answer lines.\n\nDensity is calm and editorial: generous section spacing, a 1180px measure, hairline rules doing the work that boxes and shadows do elsewhere. The voice is honest and plain; the only theatrical moment is one short motion sequence in the hero.",
+    "keyCharacteristics": [
+      "One paper ground, black ink, one red (with a deeper press state and a pale wash for selection).",
+      "PT Serif for headings, problem text, quotes and price numerals; Golos Text for body, labels and UI; Marck Script only in red for pen notes.",
+      "3px double ink rules divide sections; 1px warm hairlines divide rows.",
+      "Recurring 5 : 7 two-column split (statement left, working right) that collapses to one column on phones.",
+      "Square corners everywhere except 3px on controls.",
+      "Greyscale photography that regains colour on hover or keyboard focus.",
+      "One orchestrated motion (hero square assembles, pen tick draws), fully off under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The One Red Rule",
+        "body": "Red is the teacher's pen and the page's signal of attention: marks, corrections, hover, focus and errors. It never becomes a section background, a card fill or a second accent hue. The red-filled hero layer and the hover state of the primary button are the largest red areas the system allows.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Hierarchy Rule",
+        "body": "Text steps down ink, ink-2, ink-3 by importance; never lighter than ink-3 for anything a reader must read.",
+        "section": "colors"
+      },
+      {
+        "name": "The Printed vs Handwritten Rule",
+        "body": "Serif is what the sheet says, sans is how you use it, script is what the teacher wrote on it. Marck Script appears only in red and only as an annotation beside existing content.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hanging Numeral Rule",
+        "body": "Numbered conditions hang their numeral in a 1.6em outdent so the heading text aligns flush; numerals use lining tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Rules Not Boxes Rule",
+        "body": "Separate content with ink and hairline rules; a new surface (sheet white) is reserved for something that is genuinely a separate sheet: the problem, the answer box, the featured price.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do open every section after the hero with the 3px double ink rule inside the 1180px measure.",
+      "Do set statement-and-explanation content in the 5 : 7 split, separated by 1px hairlines (`rule`).",
+      "Do number sequential points as conditions with hanging lining numerals.",
+      "Do keep prices and sums in PT Serif 700 lining figures with units in Golos ink-3 beside them.",
+      "Do write pen notes in Marck Script, red, rotated -2deg to -4deg, as an annotation next to content that already stands on its own.",
+      "Do print people photos in greyscale and let colour return on hover and keyboard focus.",
+      "Do use sheet white only for a surface that is a separate sheet (problem, answer box, featured price).",
+      "Do gate any entrance motion behind `prefers-reduced-motion: no-preference`."
+    ],
+    "donts": [
+      "Don't introduce a second accent hue or a lighter/brighter red; the red family is `red`, `red-deep`, `red-wash` only.",
+      "Don't fill sections or cards with red, or with any tinted background beyond the three paper tones.",
+      "Don't use Marck Script for headings, labels, buttons or anything a reader must parse to act.",
+      "Don't draw inputs as boxes; they are answer lines.",
+      "Don't round surfaces or photos; radius belongs to controls (3px) only.",
+      "Don't add shadows to rows, sections or price columns; depth is reserved for the problem card and the dropdown menu.",
+      "Don't use uppercase tracked labels or kickers above headings."
+    ]
+  }
+}
